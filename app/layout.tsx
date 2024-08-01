@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "@/components/(theme)/ThemeProvider";
+import { ThemeToggle } from "@/components/(theme)/ThemeSwitcher";
 
-const inter = Inter({ subsets: ["latin"] });
+const font = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,8 +17,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <body className={font.className}>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+          <div className="container max-w-3xl mx-auto min-h-screen px-4 py-5">
+            <div className="flex justify-between"> {/* Temporary Header */}
+              <span className="self-center font-extralight text-2xl">Rudransh</span>
+              <ThemeToggle />
+            </div>
+            {children}
+          </div>
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
