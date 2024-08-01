@@ -1,0 +1,26 @@
+"use client";
+
+import * as React from "react";
+import { MoonIcon, SunIcon } from "@radix-ui/react-icons";
+import { Button } from "@/components/ui/button";
+import { useTheme } from "next-themes";
+import { useHasMounted } from "@/hooks/use-has-mounted";
+
+export function ThemeToggle() {
+	const { setTheme, resolvedTheme } = useTheme();
+    const hasMounted = useHasMounted();
+
+    const toggleTheme = () => {
+        setTheme(resolvedTheme === "dark" ? "light" : "dark");
+    }
+
+    if (!hasMounted){
+        return null;
+    }
+
+	return (
+        <Button variant="link" size="icon" onClick={toggleTheme}>
+            { resolvedTheme === "dark" ? <MoonIcon /> : <SunIcon /> }
+        </Button>
+	);
+}
