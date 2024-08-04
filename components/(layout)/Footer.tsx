@@ -40,7 +40,7 @@ const Footer = () => {
 			<div className="flex justify-between items-center text-muted-foreground">
 				<div className="flex space-x-2 items-center text-sm">
 					<span className="flex items-center text-foreground cursor-pointer"><AtIcon /></span>
-					<span className="text-lg font-semibold">//</span>
+					<span className="text-lg font-semibold">{'//'}</span>
 					<span className="flex items-center space-x-2">
 						<Link className="hover:text-foreground cursor-pointer" target="_blank" href="https://github.com/FireHead90544"><GitHubIcon /></Link>
 						<Link className="hover:text-foreground cursor-pointer" target="_blank" href="https://linkedin.com/in/rudraxd"><LinkedInIcon /></Link>
