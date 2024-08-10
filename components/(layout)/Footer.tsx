@@ -7,8 +7,14 @@ import { MdAlternateEmail as AtIcon } from "react-icons/md";
 import { Separator } from "../ui/separator";
 import { hash } from "@/lib/utils";
 
+interface FooterProps {
+	github: string,
+	linkedin: string,
+	twitter: string,
+	mail: string
+}
 
-const Footer = () => {
+const Footer = ({ github, linkedin, twitter, mail }: FooterProps) => {
 	const getFrut = () => {
 		const fruts = [
 			"🍎 appl",
@@ -42,10 +48,10 @@ const Footer = () => {
 					<span className="flex items-center text-foreground cursor-pointer"><AtIcon /></span>
 					<span className="text-lg font-semibold">{'//'}</span>
 					<span className="flex items-center space-x-2">
-						<Link className="hover:text-foreground cursor-pointer" target="_blank" href="https://github.com/FireHead90544"><GitHubIcon /></Link>
-						<Link className="hover:text-foreground cursor-pointer" target="_blank" href="https://linkedin.com/in/rudraxd"><LinkedInIcon /></Link>
-						<Link className="hover:text-foreground cursor-pointer" target="_blank" href="https://x.com/_rudra_xd_"><TwitterIcon /></Link>
-						<Link className="hover:text-foreground cursor-pointer" href="mailto:rudranshjoshi1806@gmail.com"><EmailIcon /></Link>
+						<Link className="hover:text-foreground cursor-pointer" target="_blank" href={github}><GitHubIcon /></Link>
+						<Link className="hover:text-foreground cursor-pointer" target="_blank" href={linkedin}><LinkedInIcon /></Link>
+						<Link className="hover:text-foreground cursor-pointer" target="_blank" href={twitter}><TwitterIcon /></Link>
+						<Link className="hover:text-foreground cursor-pointer" href={`mailto:${mail}`}><EmailIcon /></Link>
 					</span>
 				</div>
 				<span className="hover:text-foreground cursor-pointer">{ getFrut() } :3</span>
