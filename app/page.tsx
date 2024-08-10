@@ -18,7 +18,7 @@ export default function Home() {
 
 			<AboutContainer>
 				<span>
-					hi, i'm rudransh. a software engineer majoring in ai&ml.
+					hi, {"i'm"} rudransh. a software engineer majoring in {"ai&ml"}.
           my field of research and interest lies in machine learning (more specifically, deep learning).
           neural networks, llms & calculus fascinates me a lot. i love contributing to open source projects.
 				</span>
