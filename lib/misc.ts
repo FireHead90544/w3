@@ -1,0 +1,17 @@
+export function getRandomFact(){
+    const facts = [
+        "obsessed with cats *meow*, how cool",
+        "i can sleep hella lot ngl",
+        "have watched 350+ animes",
+        "read more than 50 manga/manhwa & light novels",
+        "i use vsc/neovim mostly, notepad too lol",
+        "cli is so damn awesome, bash ftw",
+        "i'm an isfj-a (assertive defender? yea)",
+        "enjoys a wide genre of music",
+        "i hate how people try to look cool while being pathetic",
+        "just a typical relatable guy you can't relate to",
+        "installing hyprland + arch on vbox annoys me the most"
+    ]
+
+    return facts[Math.floor(Math.random() * facts.length)]
+}
