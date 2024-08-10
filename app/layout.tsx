@@ -22,11 +22,16 @@ export default function RootLayout({
       <body className={font.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <div className="container flex flex-col max-w-3xl mx-auto min-h-screen px-4 py-5">
-            <Header />
+            <Header nick="rudra" highlight="xd" />
             <main className="flex-1 flex">
               {children}
             </main>
-            <Footer />
+            <Footer
+              github="https://github.com/FireHead90544"
+              linkedin="https://linkedin.com/in/rudraxd"
+              twitter="https://x.com/_rudra_xd_"
+              mail="rudranshjoshi1806@gmail.com"
+            />
           </div>
         </ThemeProvider>
       </body>
