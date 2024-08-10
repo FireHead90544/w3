@@ -2,7 +2,7 @@ import React from 'react'
 import Link, { LinkProps } from 'next/link'
 import { RxArrowTopRight as ArrowTopRight } from "react-icons/rx";
 
-interface InternalLinkProps extends LinkProps{
+interface InternalLinkProps extends LinkProps {
   text: string
 }
 
