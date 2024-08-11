@@ -19,8 +19,9 @@ export default function Home() {
 			<AboutContainer>
 				<span>
 					hi, {"i'm"} rudransh. a software engineer majoring in {"ai&ml"}.
-					my field of research and interest lies in machine learning (more specifically, deep learning).
-					neural networks, llms & calculus fascinates me a lot. i love contributing to open source projects.
+					my field of research and interest lie in machine learning (more specifically, deep learning).
+					neural networks, llms and calculus fascinate me a lot. i frequently contribute to open source development.
+					feel free to check out my work, blog or maybe just sign the guestbook, eh?
 				</span>
 				<Alert>
 					<LightningBoltIcon className="h-4 w-4" />
