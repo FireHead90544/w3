@@ -1,5 +1,3 @@
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
 import InternalLink from "@/components/(misc)/InternalLink";
 import LinksContainer from "@/components/(landing)/LinksContainer";
 import AboutContainer from "@/components/(landing)/AboutContainer";
