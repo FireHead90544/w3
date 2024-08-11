@@ -19,7 +19,7 @@ export function ThemeToggle() {
     }
 
 	return (
-        <Button variant="link" size="icon" onClick={toggleTheme}>
+        <Button variant="link" size="icon" className="h-auto" onClick={toggleTheme}>
             { resolvedTheme === "dark" ? <MoonIcon /> : <SunIcon /> }
         </Button>
 	);
