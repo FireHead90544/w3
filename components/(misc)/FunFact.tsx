@@ -22,7 +22,7 @@ const FunFact = () => {
     return null;
   }
 
-  return fact ? <span>fun fact? {fact}</span> : null;
+  return fact ? <span>{fact}</span> : null;
 }
 
 export default FunFact
