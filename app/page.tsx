@@ -3,6 +3,8 @@ import LinksContainer from "@/components/(landing)/LinksContainer";
 import AboutContainer from "@/components/(landing)/AboutContainer";
 import ProfileContainer from "@/components/(landing)/ProfileContainer";
 import FunFact from "@/components/(misc)/FunFact";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { LightningBoltIcon } from "@radix-ui/react-icons";
 
 export default function Home() {
   return (
@@ -20,10 +22,13 @@ export default function Home() {
 					my field of research and interest lies in machine learning (more specifically, deep learning).
 					neural networks, llms & calculus fascinates me a lot. i love contributing to open source projects.
 				</span>
-				<span>
-					i like reading stuffs & people, listening to music.
-          			and builds cool stuff. <FunFact />
-				</span>
+				<Alert>
+					<LightningBoltIcon className="h-4 w-4" />
+					<AlertTitle>fun fact?</AlertTitle>
+					<AlertDescription>
+						<FunFact />
+					</AlertDescription>
+				</Alert>
 			</AboutContainer>
 
 			<LinksContainer>
