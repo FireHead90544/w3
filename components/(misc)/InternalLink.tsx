@@ -4,6 +4,7 @@ import { RxArrowTopRight as ArrowTopRight } from "react-icons/rx";
 
 interface InternalLinkProps extends LinkProps {
   text: string
+  target?: "_blank" | "_self" | "_parent" | "_top"
 }
 
 const InternalLink = ({ text, ...props }: InternalLinkProps) => {
