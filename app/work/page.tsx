@@ -1,44 +1,21 @@
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
-import InternalLink from "@/components/(misc)/InternalLink";
+import ProjectItem from "@/components/(work)/ProjectItem";
+import data from "@/content/work/projects.json";
 
 export default function Home() {
+	const projects = data.projects.sort((a, b) => new Date(b.released_by).getTime() - new Date(a.released_by).getTime());
 	return (
 		<div className="flex flex-col space-y-6 my-4 w-full">
 			<div className="flex flex-col">
 				<h1 className="text-3xl font-light">work</h1>
 				<span>some of my most notable works and projects</span>
 			</div>
-			<div className="flex flex-col space-y-3">
-				<div className="flex flex-col">
-					<div className="flex justify-between text-xl">
-                        <div className="space-x-2">
-                            <span className="font-medium">1.</span>
-                            <span className="font-medium">how-cli</span>
-                        </div>
-                        <div className="space-x-2 text-sm sm:text-lg">
-                            <InternalLink href="/" text="source" />
-                            <InternalLink href="/" text="deployment" />
-                        </div>
-					</div>
-					<span className="font-extralight">context aware ai-based cli application built using langchain + typer to help you with command line and shell.</span>
-				</div>
-			</div>
-            <div className="flex flex-col space-y-3">
-				<div className="flex flex-col">
-					<div className="flex justify-between text-xl">
-                        <div className="space-x-2">
-                            <span className="font-medium">2.</span>
-                            <span className="font-medium">retro rings</span>
-                        </div>
-                        <div className="space-x-2 text-sm sm:text-lg">
-                            <InternalLink href="/" text="source" />
-                            <InternalLink href="/" text="deployment" />
-                        </div>
-					</div>
-					<span className="font-extralight">an 8-bit rpg-themed application written w/ next.js, react, tailwindcss, chart.js, fastapi and pytorch designed to predict outcomes for the 2024 paris olympics for codedex summer hackathon 2024.</span>
-				</div>
-			</div>
+			<ol className="space-y-6">
+				{projects.map((project, idx) => (
+					<li key={idx}>
+						<ProjectItem project={project} id={idx+1} />
+					</li>
+				))}
+			</ol>
 		</div>
 	);
 }
