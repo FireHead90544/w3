@@ -1,0 +1,20 @@
+{
+    "projects": [
+        {
+            "title": "how-cli",
+            "description": "context aware ai-based cli application built using langchain + typer to help you with command line and shell.",
+            "source": "https://github.com/FireHead90544/how-cli/",
+            "status": "video demo",
+            "status_url": "https://github.com/user-attachments/assets/effefe1a-c0ed-4b60-838c-98f992f6c25f/",
+            "released_by": "2024-08"
+        },
+        {
+            "title": "retro rings",
+            "description": "an 8-bit rpg-themed application written w/ next.js, react, tailwindcss, chart.js, fastapi and pytorch designed to predict outcomes for the 2024 paris olympics for codedex summer hackathon 2024.",
+            "source": "https://github.com/andreiBalan-dev/tryCatchUs/",
+            "status": "deployment",
+            "status_url": "https://tryretrorings.xyz/",
+            "released_by": "2024-07"
+        }
+    ]
+}
