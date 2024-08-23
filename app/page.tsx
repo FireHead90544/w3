@@ -21,7 +21,7 @@ export default function Home() {
 				neural networks, llms and calculus fascinate me a lot. i frequently contribute to open source development.
 				feel free to check out my work, blog or maybe just sign the guestbook, eh?
 			</span>
-			<FunFactBox/>
+			<FunFactBox />
 		</AboutContainer>
 
 		<LinksContainer>
