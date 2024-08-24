@@ -1,12 +1,20 @@
 {
     "projects": [
         {
+            "title": "w3",
+            "description": "",
+            "source": "https://github.com/FireHead90544/w3/",
+            "status": "deployment",
+            "status_url": "/",
+            "released_by": "2024-09"
+        },
+        {
             "title": "aria2py",
             "description": "a json-rpc api wrapper for interacting w/ the aria2 daemon, offering programmatic control over downloads.",
             "source": "https://github.com/FireHead90544/aria2py/",
             "status": "undeployed",
             "status_url": null,
-            "released_by": "Present"
+            "released_by": "2024-06"
         },
         {
             "title": "nextpy",
@@ -14,7 +22,7 @@
             "source": "https://github.com/FireHead90544/NextPY/",
             "status": "undeployed",
             "status_url": null,
-            "released_by": "Present"
+            "released_by": "2024-02"
         },
         {
             "title": "senpy",
@@ -22,7 +30,7 @@
             "source": "https://github.com/FireHead90544/SenPY/",
             "status": "visual demo",
             "status_url": "https://user-images.githubusercontent.com/55452780/184005609-eea73142-8802-43f1-ad79-3d0d99e6d75d.png",
-            "released_by": "Present"
+            "released_by": "2024-06"
         },
         {
             "title": "pookiefy",
@@ -31,6 +39,14 @@
             "status": "deployment",
             "status_url": "https://pookiefy.vercel.app/",
             "released_by": "2024-07"
+        },
+        {
+            "title": "there-is-no-website",
+            "description": "there's only one way to find out if there's a website or not, and that's by visiting it. a little surprise at the end.",
+            "source": "https://github.com/andreiBalan-dev/there-is-no-website/",
+            "status": "deployment",
+            "status_url": "https://thereisnoweb.site/",
+            "released_by": "2024-08"
         },
         {
             "title": "retrorings",
