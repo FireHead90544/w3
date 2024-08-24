@@ -2,7 +2,7 @@
     "projects": [
         {
             "title": "w3",
-            "description": "",
+            "description": "my cool & minimal portfolio revamped w/ next.js + react + tailwindcss optimized for performance + seo.",
             "source": "https://github.com/FireHead90544/w3/",
             "status": "deployment",
             "status_url": "/",
