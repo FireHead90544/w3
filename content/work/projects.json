@@ -1,6 +1,62 @@
 {
     "projects": [
         {
+            "title": "w3",
+            "description": "",
+            "source": "https://github.com/FireHead90544/w3/",
+            "status": "deployment",
+            "status_url": "/",
+            "released_by": "2024-09"
+        },
+        {
+            "title": "aria2py",
+            "description": "a json-rpc api wrapper for interacting w/ the aria2 daemon, offering programmatic control over downloads.",
+            "source": "https://github.com/FireHead90544/aria2py/",
+            "status": "undeployed",
+            "status_url": null,
+            "released_by": "2024-06"
+        },
+        {
+            "title": "nextpy",
+            "description": "an open-source anime streaming platform built with next.js, react, tailwindcss + shadcn, based on its parent project senpy.",
+            "source": "https://github.com/FireHead90544/NextPY/",
+            "status": "undeployed",
+            "status_url": null,
+            "released_by": "2024-02"
+        },
+        {
+            "title": "senpy",
+            "description": "a cli-based anime downloader written in python integrated w/ aria2 for optimized downloads, highly efficient + customizable.",
+            "source": "https://github.com/FireHead90544/SenPY/",
+            "status": "visual demo",
+            "status_url": "https://user-images.githubusercontent.com/55452780/184005609-eea73142-8802-43f1-ad79-3d0d99e6d75d.png",
+            "released_by": "2024-06"
+        },
+        {
+            "title": "pookiefy",
+            "description": "a simple next.js app that shows spotify player state in real-time using the spotify api, built with react + tailwindcss.",
+            "source": "https://github.com/FireHead90544/Pookiefy/",
+            "status": "deployment",
+            "status_url": "https://pookiefy.vercel.app/",
+            "released_by": "2024-07"
+        },
+        {
+            "title": "there-is-no-website",
+            "description": "there's only one way to find out if there's a website or not, and that's by visiting it. a little surprise at the end.",
+            "source": "https://github.com/andreiBalan-dev/there-is-no-website/",
+            "status": "deployment",
+            "status_url": "https://thereisnoweb.site/",
+            "released_by": "2024-08"
+        },
+        {
+            "title": "retrorings",
+            "description": "an 8-bit rpg-themed application written w/ next.js, react, tailwindcss, chart.js, fastapi and pytorch designed to predict outcomes for the 2024 paris olympics for codedex summer hackathon 2024.",
+            "source": "https://github.com/andreiBalan-dev/tryCatchUs/",
+            "status": "deployment",
+            "status_url": "https://tryretrorings.xyz/",
+            "released_by": "2024-07"
+        },
+        {
             "title": "how-cli",
             "description": "context aware ai-based cli application built using langchain + typer to help you with command line and shell.",
             "source": "https://github.com/FireHead90544/how-cli/",
@@ -9,12 +65,116 @@
             "released_by": "2024-08"
         },
         {
-            "title": "retro rings",
-            "description": "an 8-bit rpg-themed application written w/ next.js, react, tailwindcss, chart.js, fastapi and pytorch designed to predict outcomes for the 2024 paris olympics for codedex summer hackathon 2024.",
-            "source": "https://github.com/andreiBalan-dev/tryCatchUs/",
+            "title": "nextgw",
+            "description": "a python-based tool integrating youtube api, ffmpeg, next.js + react to get streamable playlists of lectures from subscribed pw batches with some youtube automation.",
+            "source": null,
+            "status": "undeployed",
+            "status_url": null,
+            "released_by": "2024-04"
+        },
+        {
+            "title": "openrain",
+            "description": "a simple rainmeter skin that displays current weather using openweathermap apis, forked from rek42/simple-openweathermap.",
+            "source": "https://github.com/FireHead90544/OpenRain/",
+            "status": "skin release",
+            "status_url": "https://github.com/FireHead90544/OpenRain/releases/download/v1.2.0/OpenRain_1.2.0.rmskin",
+            "released_by": "2024-01"
+        },
+        {
+            "title": "rudra-django",
+            "description": "a personal portfolio website built with django, tailwindcss + postgresql, featuring a timeline, blog, dashboard, user auth + portfolio sections.",
+            "source": "https://github.com/FireHead90544/rudra-django/",
             "status": "deployment",
-            "status_url": "https://tryretrorings.xyz/",
-            "released_by": "2024-07"
+            "status_url": "https://rudra.is-a.dev/",
+            "released_by": "2023-04"
+        },
+        {
+            "title": "crap-bot",
+            "description": "a deep-learning powered chatbot for champawat district, developed @ dr. a. p. j abdul kalam institute of technology, tanakpur.",
+            "source": "https://github.com/FireHead90544/Crap-Bot/",
+            "status": "undeployed",
+            "status_url": null,
+            "released_by": "2023-03"
+        },
+        {
+            "title": "craiyon.py",
+            "description": "an api wrapper around craiyon.com (formerly known as dal-e-mini) for python, used to generate images from text tokens.",
+            "source": "https://github.com/FireHead90544/craiyon.py/",
+            "status": "visual demo",
+            "status_url": "https://user-images.githubusercontent.com/55452780/235368949-05e4d215-5f29-4aea-a059-e6ad62b1ee2c.png",
+            "released_by": "2023-01"
+        },
+        {
+            "title": "i-scream",
+            "description": "a multipurpose single-guilded discord bot built specifically for ayusanimation's server consisting of a variety of commands sufficient enough to manage a large guild.",
+            "source": null,
+            "status": "undeployed",
+            "status_url": null,
+            "released_by": "2022-11"
+        },
+        {
+            "title": "anime-rpc",
+            "description": "a discord rich presence client that shows anime info on your discord profile, letting you share what you're watching as a rich presence status.",
+            "source": "https://github.com/FireHead90544/AnimeRPC/",
+            "status": "visual demo",
+            "status_url": "https://user-images.githubusercontent.com/55452780/185986480-56a87fc2-380d-455d-a32c-d6398ab7e9cf.png",
+            "released_by": "2022-08"
+        },
+        {
+            "title": "pwutils",
+            "description": "a set of utilities made to enhance the experience of using physicswallah's website.",
+            "source": "https://github.com/FireHead90544/PWUtils/",
+            "status": "visual demo",
+            "status_url": "https://user-images.githubusercontent.com/55452780/175779388-8f1d8944-36bb-43e5-b0e3-b3298fcb8066.png",
+            "released_by": "2022-07"
+        },
+        {
+            "title": "pyqtts",
+            "description": "an open-source gui-based text-to-speech application built with the qt framework.",
+            "source": "https://github.com/FireHead90544/PyQTTs/",
+            "status": "visual demo",
+            "status_url": "https://user-images.githubusercontent.com/55452780/116579588-26d5c400-a930-11eb-9606-8a82fdede900.png",
+            "released_by": "2022-07"
+        },
+        {
+            "title": "pymemo",
+            "description": "a cli-based memo app for saving + reading notes and todos locally, developed as a school project.",
+            "source": "https://github.com/FireHead90544/PyMemo/",
+            "status": "video demo",
+            "status_url": "https://github.com/FireHead90544/PyMemo/blob/main/images/demo.gif",
+            "released_by": "2022-03"
+        },
+        {
+            "title": "bsdotpy",
+            "description": "an api wrapper around bombsquad's api, designed to fetch player account data using python.",
+            "source": "https://github.com/FireHead90544/bsdotpy/",
+            "status": "usage demo",
+            "status_url": "https://github.com/FireHead90544/bsdotpy?tab=readme-ov-file#usage--examples",
+            "released_by": "2022-01"
+        },
+        {
+            "title": "pymailer",
+            "description": "an open-source gui-based mail sender built with the qt framework (pyside2) and smtplib.",
+            "source": "https://github.com/FireHead90544/PyMailer/",
+            "status": "visual demo",
+            "status_url": "https://user-images.githubusercontent.com/55452780/141337038-3ce07f92-556d-4422-83de-a66a2386277c.png",
+            "released_by": "2021-11"
+        },
+        {
+            "title": "pyshop",
+            "description": "a shopping cart simulator demonstrating the working of a minimal cart, written in python + sqlite3.",
+            "source": "https://github.com/FireHead90544/PyShop/",
+            "status": "video demo",
+            "status_url": "https://github.com/FireHead90544/PyShop/blob/main/images/demo.gif",
+            "released_by": "2021-11"
+        },
+        {
+            "title": "shortyy",
+            "description": "a custom branded url shortener built using flask + postgresql, a free and open-source alternative to paid services.",
+            "source": "https://github.com/FireHead90544/shortyy/",
+            "status": "undeployed",
+            "status_url": null,
+            "released_by": "2021-01"
         }
     ]
 }

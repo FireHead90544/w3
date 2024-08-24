@@ -5,7 +5,7 @@ import NoLink from '../(misc)/NoLink'
 interface ProjectItemProps {    
     title: string,
     description: string,
-    source: string,
+    source: string | null,
     status: string,
     status_url: string | null,
     released_by: string
@@ -21,7 +21,7 @@ const ProjectItem = ({ project, id }: { project: ProjectItemProps, id: number })
                     <span className="font-medium">{project.title}</span>
                 </div>
                 <div className="space-x-2 text-sm sm:text-lg select-none">
-                    <InternalLink href={project.source} text="source" target={"_blank"} />
+                    {project.source ? <InternalLink href={project.source} text="source" target={"_blank"} /> : <NoLink text="closed" /> }
                     {project.status_url ? <InternalLink href={project.status_url} text={project.status} target={"_blank"} /> : <NoLink text={project.status} />}
                 </div>
             </div>
