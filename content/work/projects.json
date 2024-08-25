@@ -41,8 +41,8 @@
             "released_by": "2024-07"
         },
         {
-            "title": "there-is-no-website",
-            "description": "there's only one way to find out if there's a website or not, and that's by visiting it. a little surprise at the end.",
+            "title": "thereisnoweb",
+            "description": "a functionally dysfunctional hack built for hackathon with lewis 2024. there's only one way to find out if there's a website or not, and that's by visiting it. a sweet little surprise at the end.",
             "source": "https://github.com/andreiBalan-dev/there-is-no-website/",
             "status": "deployment",
             "status_url": "https://thereisnoweb.site/",
