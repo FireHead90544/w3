@@ -57,11 +57,19 @@
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
   }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none
+  }
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 }
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-border hide-scrollbar;
   }
   body {
     @apply bg-background text-foreground;
