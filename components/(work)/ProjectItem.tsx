@@ -25,7 +25,7 @@ const ProjectItem = ({ project, id }: { project: ProjectItemProps, id: number })
                     {project.status_url ? <InternalLink href={project.status_url} text={project.status} target={"_blank"} /> : <NoLink text={project.status} />}
                 </div>
             </div>
-            <span className="font-extralight">{project.description}</span>
+            <span className="font-light text-muted-foreground">{project.description}</span>
         </div>
     </div>
   );
