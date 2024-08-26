@@ -1,7 +1,7 @@
 import ProjectItem from "@/components/(work)/ProjectItem";
 import data from "@/content/work/projects.json";
 
-export default function Home() {
+export default function Work() {
 	const projects = data.projects.sort((a, b) => new Date(b.released_by).getTime() - new Date(a.released_by).getTime());
 	return (
 		<div className="flex flex-col space-y-6 my-4 w-full">
