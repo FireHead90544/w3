@@ -1,19 +1,13 @@
 import React from "react";
 import PostItem from "@/components/(blog)/PostItem";
+import { getBlogPosts } from "@/lib/blog";
 
 export default function Blog() {
-	const posts = [
-		{
-			title: "this route is under construction",
-			slug: "look-back-at-2024",
-			publish_date: "aug 26, 2024"
-		},
-		{
-			title: "work in progress, please check back later",
-			slug: "fresh-start-2025-with-low-level",
-			publish_date: "aug 27, 2024"
-		}
-	]
+	const posts = getBlogPosts().sort((a, b) => new Date(b.metadata.publish_date).getTime() - new Date(a.metadata.publish_date).getTime()).map((post) => ({
+		title: post.metadata.title,
+		slug: post.slug,
+		publish_date: post.metadata.publish_date
+	}));
 
 	return (
 		<div className="flex flex-col space-y-6 my-4 w-full">
