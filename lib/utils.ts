@@ -14,3 +14,11 @@ export function hash(str: string) {
 
   return hash;
 }
+
+export function parseDate(date: string) {
+  return new Date(date).toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "short",
+    day: "numeric"
+  }).toLowerCase();
+}
