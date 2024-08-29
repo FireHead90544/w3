@@ -1,16 +1,12 @@
 import React from 'react'
-import { MDXRemote } from 'next-mdx-remote/rsc'
-
-interface MDXProps {
-  source: string,
-  components?: any
-}
+import { MDXRemote, MDXRemoteProps } from 'next-mdx-remote/rsc'
+import Code from '@/components/(mdx)/Code'
 
 const components = {
-
+  pre: Code
 }
 
-const CustomMDX = (props: MDXProps) => {
+const CustomMDX = (props: MDXRemoteProps) => {
   return (
     <MDXRemote {...props} components={{ ...components, ...(props.components || {}) }} />
   )
