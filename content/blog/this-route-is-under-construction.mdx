@@ -1,43 +1,80 @@
 ---
-title: This route is under construction
-summary: The /blog route is under construction
-publish_date: 2024-08-27
+title: Building Web apps with Next.js, TypeScript, and React  
+summary: A guide to getting started with Next.js, TypeScript, and React to build modern web applications.  
+publish_date: 2024-08-29
 ---
 
-# Under Construction: Exciting Changes Coming Soon!
+Next.js is a powerful React framework that enables you to build fast, user-friendly web applications. By combining Next.js with TypeScript, you can write strongly-typed code that is easier to maintain and less prone to errors. In this blog post, we'll walk through setting up a Next.js project with TypeScript and React.
 
-Hello, dear readers! 👋
+### Why Choose Next.js?
 
-We wanted to take a moment to let you know that our blog section is currently under construction. We're working hard behind the scenes to bring you an even better reading experience.
+#### Key Features
 
-## What's Happening?
+- **Server-Side Rendering (SSR)**: Next.js makes it easy to render pages on the server, which can significantly improve performance and SEO.
+- **Static Site Generation (SSG)**: You can pre-render pages at build time, offering a performance boost and enhanced SEO.
+- **API Routes**: Next.js allows you to create API endpoints, which can be used to handle form submissions, fetch data, or build full-stack applications.
+- **Built-in CSS Support**: Style your application using plain CSS, Sass, or styled-components.
 
-Our team is in the process of revamping the entire `/blog` route. We're implementing new features, improving the design, and optimizing performance to ensure that you have access to the best content in the most user-friendly way possible.
+#### Why TypeScript?
 
-## What Can You Expect?
+TypeScript brings static typing to JavaScript, making your code more predictable and easier to debug. With TypeScript, you can catch errors at compile-time, leading to a smoother development experience.
 
-Once we're done, you can look forward to:
 
-1. **A fresh, modern design**: We're giving our blog a facelift to make it more visually appealing and easier to navigate.
-2. **Improved search functionality**: Finding the articles you're interested in will be faster and more intuitive.
-3. **Enhanced mobile experience**: Our new blog will be fully responsive, ensuring a great reading experience on all devices.
-4. **Faster loading times**: We're optimizing our code and assets to make sure the blog loads quickly, even on slower connections.
-5. **New content categories**: We're reorganizing our content to make it easier for you to find articles on topics you're passionate about.
+### Getting Started
 
-## When Will It Be Ready?
+To start a new project, run the following command:
 
-We're working diligently to complete this upgrade as soon as possible. While we don't have an exact launch date yet, we're aiming to have the new blog up and running within the next few weeks.
+```bash
+npx create-next-app@latest --ts my-nextjs-app
+```
 
-## Stay Tuned!
+This will create a new Next.js project with TypeScript support out of the box.
 
-We appreciate your patience during this transition period. To stay updated on our progress and be the first to know when the new blog launches, you can:
+#### Project Structure
 
-- Follow us on social media
-- Sign up for our newsletter
-- Check back here regularly for updates
+Here's a quick look at the default project structure:
 
-We can't wait to share our new and improved blog with you. Thank you for your continued support and understanding.
+```
+my-nextjs-app/
+├── pages/
+│   ├── _app.tsx
+│   └── index.tsx
+├── public/
+├── styles/
+└── tsconfig.json
+```
 
-Happy reading, and see you soon on our brand-new blog!
+The `pages/` directory is where you define your application's routes, while `tsconfig.json` handles TypeScript configuration.
 
-*This content is AI generated, used for testing purposes only*
+
+### Writing Your First Component
+
+Let's create a simple React component in TypeScript:
+
+```Component.tsx
+import React from 'react';
+
+const HelloWorld: React.FC = () => {
+  return <h1>Hello, World!</h1>;
+};
+
+export default HelloWorld;
+```
+
+This component uses the `React.FC` type, which stands for "Function Component." It's a simple way to type a functional component in TypeScript.
+
+
+### Deploying Your Application
+
+Next.js applications can be easily deployed on Vercel, the creators of Next.js. Simply push your project to a GitHub repository, and import it into Vercel. Vercel automatically detects Next.js projects and handles the deployment process for you.
+
+{<img center={"true"} src={"https://github.com/user-attachments/assets/d986caff-7642-40dc-a389-09c771e95f82"} width={512} alt={"hello?"} />}
+
+
+### Conclusion
+
+With Next.js, TypeScript, and React, you can build robust and scalable web applications quickly and efficiently. Whether you're building a simple static site or a complex full-stack application, this stack provides the tools you need to succeed.
+
+😄 🎉 🚀
+
+*This is AI Generated content used for testing*
