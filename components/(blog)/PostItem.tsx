@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { parseDate } from '@/lib/utils';
+import { formatDate } from '@/lib/utils';
 
 interface PostItemProps {    
     title: string,
@@ -15,7 +15,7 @@ const PostItem = ({ post, id }: { post: PostItemProps, id: number }) => {
             <span>{id}</span>
             <div className="flex flex-col justify-between sm:w-full sm:flex-row">
                 <span className="underline decoration-border underline-offset-[6.5px]">{post.title.toLowerCase()}</span>
-                <time dateTime={post.publish_date} className="text-base text-muted-foreground">{parseDate(post.publish_date)}</time>
+                <time dateTime={post.publish_date} className="text-base text-muted-foreground">{formatDate(post.publish_date)}</time>
             </div>
         </div>
     </Link>
