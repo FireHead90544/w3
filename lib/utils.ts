@@ -15,12 +15,37 @@ export function hash(str: string) {
   return hash;
 }
 
-export function parseDate(date: string) {
-  return new Date(date).toLocaleDateString("en-US", {
+export function formatDate(date: string, addRelative: boolean = false): string {
+  const dateObj = new Date(date);
+  
+  const formattedDate = dateObj.toLocaleDateString("en-US", {
     year: "numeric",
     month: "short",
     day: "numeric"
   }).toLowerCase();
+
+  if (!addRelative) {
+    return formattedDate;
+  }
+
+  const now = new Date();
+  const diffTime = now.getTime() - dateObj.getTime();
+  const diffDays = Math.ceil(Math.abs(diffTime) / (1000 * 60 * 60 * 24));
+  let timeAgo: string;
+
+  if (diffDays < 30) {
+    timeAgo = `${diffDays} day${diffDays !== 1 ? 's' : ''}`;
+  } else if (diffDays < 365) {
+    const diffMonths = Math.floor(diffDays / 30);
+    timeAgo = `${diffMonths} month${diffMonths !== 1 ? 's' : ''}`;
+  } else {
+    const diffYears = Math.floor(diffDays / 365);
+    timeAgo = `${diffYears} year${diffYears !== 1 ? 's' : ''}`;
+  }
+
+  const relativeTime = diffTime > 0 ? `${timeAgo} ago` : `in ${timeAgo}`;
+
+  return `${formattedDate} (${relativeTime})`;
 }
 
 export function slugify(str: string) {
