@@ -6,4 +6,6 @@ Code.theme = {
     lightSelector: "html.light"
 }
 
+Code.className = 'normal-case'
+
 export default Code
