@@ -25,9 +25,9 @@ export default function Home() {
 		</AboutContainer>
 
 		<LinksContainer>
-			<InternalLink href={"https://rudra.is-a.dev/static/resume.pdf"} text="resume" />
-			<InternalLink href={"/work"} text="work" />
-			<InternalLink href={"/blog"} text="blog" />
+			<InternalLink href={"https://rudra.is-a.dev/static/resume.pdf"} text="resume" fakeExternal={true} />
+			<InternalLink href={"/work"} text="work" fakeExternal={true} />
+			<InternalLink href={"/blog"} text="blog" fakeExternal={true} />
 		</LinksContainer>
 	</div>
   );
