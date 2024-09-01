@@ -10,7 +10,7 @@ export default function Post({ params }: { params: { slug: string } }) {
 	}
 
 	return (
-		<div className="flex flex-col my-6 w-full">
+		<section className="flex flex-col my-6 w-full">
 			<div className="flex flex-col space-y-8">
 				<div className="flex flex-col space-y-2">
 					<h1 className="text-3xl font-semibold">{post.metadata.title.toLowerCase()}</h1>
@@ -20,6 +20,6 @@ export default function Post({ params }: { params: { slug: string } }) {
 					<CustomMDX source={post.content} />
 				</article>
 			</div>
-		</div>
+		</section>
 	);
 }
