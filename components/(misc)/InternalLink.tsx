@@ -9,11 +9,11 @@ interface InternalLinkProps extends LinkProps {
   fakeExternal?: boolean
 }
 
-const InternalLink = ({ text, ...props }: InternalLinkProps) => {
+const InternalLink = ({ text, fakeExternal, ...props }: InternalLinkProps) => {
   return (
     <Link className="inline-flex w-fit items-center text-foreground hover:text-muted-foreground duration-200" {...props}>
       <span className="border-b-2">{text}</span>
-      {(props.target==="_blank" || props.fakeExternal) && <ArrowTopRight className="relative -top-1 scale-75" />}
+      {(props.target==="_blank" || fakeExternal) && <ArrowTopRight className="relative -top-1 scale-75" />}
     </Link>
   )
 }
