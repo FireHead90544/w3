@@ -6,7 +6,7 @@ import FunFactBox from "@/components/(misc)/FunFactBox";
 
 export default function Home() {
   return (
-	<div className="flex flex-col space-y-6 my-4 w-full">
+	<section className="flex flex-col space-y-6 my-4 w-full">
 		<ProfileContainer
 			name="rudransh joshi"
 			role="foss developer"
@@ -25,10 +25,10 @@ export default function Home() {
 		</AboutContainer>
 
 		<LinksContainer>
-			<InternalLink href={"https://rudra.is-a.dev/static/resume.pdf"} text="resume" fakeExternal={true} />
-			<InternalLink href={"/work"} text="work" fakeExternal={true} />
-			<InternalLink href={"/blog"} text="blog" fakeExternal={true} />
+			<InternalLink href={"https://rudra.is-a.dev/static/resume.pdf"} text="resume" fakeExternal />
+			<InternalLink href={"/work"} text="work" fakeExternal />
+			<InternalLink href={"/blog"} text="blog" fakeExternal />
 		</LinksContainer>
-	</div>
+	</section>
   );
 }
