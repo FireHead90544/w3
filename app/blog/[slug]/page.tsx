@@ -10,16 +10,16 @@ export default function Post({ params }: { params: { slug: string } }) {
 	}
 
 	return (
-		<div className="flex flex-col my-6 w-full">
+		<section className="flex flex-col my-6 w-full">
 			<div className="flex flex-col space-y-8">
 				<div className="flex flex-col space-y-2">
 					<h1 className="text-3xl font-semibold">{post.metadata.title.toLowerCase()}</h1>
 					<span className="text-sm text-gray-500">{formatDate(post.metadata.publish_date, true)}</span>
 				</div>
-				<article className="max-w-none lowercase prose prose-zinc prose-a:no-underline dark:prose-invert">
+				<article className="max-w-none lowercase prose prose-zinc prose-a:no-underline prose-code:normal-case dark:prose-invert">
 					<CustomMDX source={post.content} />
 				</article>
 			</div>
-		</div>
+		</section>
 	);
 }

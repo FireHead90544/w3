@@ -4,7 +4,7 @@ import data from "@/content/work/projects.json";
 export default function Work() {
 	const projects = data.projects.sort((a, b) => new Date(b.released_by).getTime() - new Date(a.released_by).getTime());
 	return (
-		<div className="flex flex-col space-y-6 my-4 w-full">
+		<section className="flex flex-col space-y-6 my-4 w-full">
 			<div className="flex flex-col">
 				<h1 className="text-3xl font-light">work</h1>
 				<span>some of my most notable works and projects</span>
@@ -16,6 +16,6 @@ export default function Work() {
 					</li>
 				))}
 			</ol>
-		</div>
+		</section>
 	);
 }
