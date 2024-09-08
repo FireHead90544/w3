@@ -7,7 +7,7 @@ export function getRandomFact(){
 }
 
 export function getHostURL(){
-    const host = process.env.VERCEL_URL || process.env.HOST_DOMAIN
+    const host = process.env.HOST_DOMAIN || process.env.VERCEL_PROJECT_PRODUCTION_URL || process.env.VERCEL_URL
     
     return host ? `https://${host}` : "http://localhost:3000"
 }
