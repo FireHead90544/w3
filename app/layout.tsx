@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={font.className}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
           <div className="container flex flex-col max-w-3xl mx-auto min-h-screen px-4 py-5">
             <Header nick="rudra" highlight="xd" />
             <main className="flex-1 flex">
