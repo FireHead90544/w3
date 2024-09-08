@@ -12,7 +12,7 @@ export async function GET(req: NextRequest) {
 	let title = searchParams.get("title");
 	let theme = searchParams.get("theme");
 
-	title = title ? title : "Rudransh Joshi";
+	title = title ? title : "Hello 🐱";
 	theme = theme === "dark" ? theme : "light";
 
 	return new ImageResponse(
