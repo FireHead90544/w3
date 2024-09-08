@@ -47,12 +47,14 @@ const Footer = ({ github, linkedin, twitter, mail }: FooterProps) => {
 				<div className="flex space-x-2 items-center text-sm">
 					<span className="flex items-center text-foreground cursor-pointer"><AtIcon /></span>
 					<span className="text-lg font-semibold">{'//'}</span>
-					<span className="flex items-center space-x-2">
-						<Link className="hover:text-foreground cursor-pointer" target="_blank" href={github}><GitHubIcon /></Link>
-						<Link className="hover:text-foreground cursor-pointer" target="_blank" href={linkedin}><LinkedInIcon /></Link>
-						<Link className="hover:text-foreground cursor-pointer" target="_blank" href={twitter}><TwitterIcon /></Link>
-						<Link className="hover:text-foreground cursor-pointer" href={`mailto:${mail}`}><EmailIcon /></Link>
-					</span>
+					<nav aria-label="Social Media Links">
+						<ul className="flex items-center space-x-2">
+							<li><Link className="hover:text-foreground cursor-pointer" target="_blank" href={github} aria-label="Visit my GitHub profile"><GitHubIcon /></Link></li>
+							<li><Link className="hover:text-foreground cursor-pointer" target="_blank" href={linkedin} aria-label="Connect with me on LinkedIn"><LinkedInIcon /></Link></li>
+							<li><Link className="hover:text-foreground cursor-pointer" target="_blank" href={twitter} aria-label="Say Hi to me on Twitter"><TwitterIcon /></Link></li>
+							<li><Link className="hover:text-foreground cursor-pointer" href={`mailto:${mail}`} aria-label={`Mail me at ${mail}`}><EmailIcon /></Link></li>
+						</ul>
+					</nav>
 				</div>
 				<span className="hover:text-foreground cursor-pointer">{ getFrut() } :3</span>
 			</div>
