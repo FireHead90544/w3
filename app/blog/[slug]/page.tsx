@@ -4,9 +4,11 @@ import CustomMDX from "@/components/(layout)/CustomMDX";
 import { formatDate } from "@/lib/utils";
 
 export async function generateStaticParams() {
-	const posts = getBlogPosts();
+	const posts = getBlogPosts().map((post) => (
+		{ slug: post.slug }
+	));
 
-	return posts.map((post) => { return { slug: post.slug } })
+	return posts
 }
 
 export default function Post({ params }: { params: { slug: string } }) {
