@@ -1,5 +1,6 @@
 import { ImageResponse } from "next/og";
 import { NextRequest } from "next/server";
+import { getHostURL } from "@/lib/misc";
 
 export const runtime = "edge";
 
@@ -25,7 +26,7 @@ export async function GET(req: NextRequest) {
 					flexDirection: "column",
 					alignItems: "center",
 					justifyContent: "center",
-					backgroundImage: `url(http://localhost:3000/meta/og-${theme}.png)`,
+					backgroundImage: `url(${getHostURL()}/meta/og-${theme}.png)`,
 					backgroundSize: "cover",
 				}}
 			>
