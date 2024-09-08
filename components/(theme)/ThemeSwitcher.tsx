@@ -19,7 +19,7 @@ export function ThemeToggle() {
     }
 
 	return (
-        <Button variant="link" size="icon" className="h-auto" onClick={toggleTheme}>
+        <Button variant="link" size="icon" className="h-auto" onClick={toggleTheme} aria-label="Switch Theme">
             { resolvedTheme === "dark" ? <MoonIcon /> : <SunIcon /> }
         </Button>
 	);

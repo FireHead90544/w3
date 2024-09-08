@@ -3,6 +3,14 @@ import { getBlogPosts } from "@/lib/blog";
 import CustomMDX from "@/components/(layout)/CustomMDX";
 import { formatDate } from "@/lib/utils";
 
+export async function generateStaticParams() {
+	const posts = getBlogPosts().map((post) => (
+		{ slug: post.slug }
+	));
+
+	return posts
+}
+
 export default function Post({ params }: { params: { slug: string } }) {
 	const post = getBlogPosts().find((post) => post.slug === params.slug);
 	if (!post) {

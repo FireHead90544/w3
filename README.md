@@ -2,6 +2,10 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
+Setup environment variables.
+
+- `HOST_DOMAIN` (No need if hosted on vercel or testing on localhost), for example: `mydomain.xyz`
+
 First, run the development server:
 
 ```bash
