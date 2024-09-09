@@ -1,0 +1,19 @@
+{
+    "name": "Rudransh Joshi",
+    "description": "Just a typical 'relatable' guy you can't relate to.",
+    "image": "/meta/og-default.png",
+    "github": "FireHead90544",
+    "linkedin": "rudraxd",
+    "twitter": "_rudra_xd_",
+    "mail": "rudranshjoshi1806@gmail.com",
+    "header": {
+        "nick": "rudra",
+        "highlight": "xd"
+    },
+    "profile": {
+        "about": "Hi, I'm rudransh. A software engineer majoring in AI&ML. My field of research and interest lie in machine learning (more specifically, deep learning). Neural Networks, LLMs and Calculus fascinate me a lot. I frequently contribute to open source development. Feel free to check out my work, blog or maybe just sign the guestbook, eh?",
+        "role": "FOSS Developer",
+        "work": "Building LLM Apps",
+        "org": "Undisclosed"
+    }
+}
