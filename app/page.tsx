@@ -3,29 +3,27 @@ import LinksContainer from "@/components/(landing)/LinksContainer";
 import AboutContainer from "@/components/(landing)/AboutContainer";
 import ProfileContainer from "@/components/(landing)/ProfileContainer";
 import FunFactBox from "@/components/(misc)/FunFactBox";
+import infoMeta from "@/content/misc/meta.json";
 
 export default function Home() {
   return (
 	<section className="flex flex-col space-y-6 my-4 w-full">
 		<ProfileContainer
-			name="rudransh joshi"
-			role="foss developer"
-			work="building llm apps"
-			org="undisclosed"
+			name={infoMeta.name.toLowerCase()}
+			role={infoMeta.profile.role.toLowerCase()}
+			work={infoMeta.profile.work.toLowerCase()}
+			org={infoMeta.profile.org.toLowerCase()}
 		/>
 
 		<AboutContainer>
 			<span>
-				hi, {"i'm"} rudransh. a software engineer majoring in {"ai&ml"}.
-				my field of research and interest lie in machine learning (more specifically, deep learning).
-				neural networks, llms and calculus fascinate me a lot. i frequently contribute to open source development.
-				feel free to check out my work, blog or maybe just sign the guestbook, eh?
+				{infoMeta.profile.about.toLowerCase()}
 			</span>
 			<FunFactBox />
 		</AboutContainer>
 
 		<LinksContainer>
-			<InternalLink href={"https://rudra.is-a.dev/static/resume.pdf"} text="resume" fakeExternal />
+			<InternalLink href={"/resume.pdf"} text="resume" fakeExternal />
 			<InternalLink href={"/work"} text="work" fakeExternal />
 			<InternalLink href={"/blog"} text="blog" fakeExternal />
 		</LinksContainer>
