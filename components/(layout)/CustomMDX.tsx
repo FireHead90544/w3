@@ -3,6 +3,7 @@ import { MDXRemote } from 'next-mdx-remote/rsc'
 import Code from '@/components/(mdx)/Code'
 import RoundedImage from '@/components/(mdx)/RoundedImage'
 import CustomLink from '@/components/(mdx)/CustomLink'
+import Table from '@/components/(mdx)/Table'
 import createHeading from '@/components/(mdx)/Heading'
 
 const components = {
@@ -14,7 +15,8 @@ const components = {
   h6: createHeading(6),
   img: RoundedImage,
   a: CustomLink,
-  pre: Code
+  pre: Code,
+  Table
 }
 
 interface MDXProps {

@@ -1,3 +1,5 @@
+# w3
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
@@ -5,6 +7,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 Setup environment variables.
 
 - `HOST_DOMAIN` (No need if hosted on vercel or testing on localhost), for example: `mydomain.xyz`
+- `NEXT_PUBLIC_UMAMI_WEBSITE_ID` (do not set if don't want to use analytics, for example: `xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx`)
+- `NEXT_PUBLIC_UMAMI_URL` (do not set if don't want to use analytics, for example: `https://cloud.umami.is`)
 
 First, run the development server:
 

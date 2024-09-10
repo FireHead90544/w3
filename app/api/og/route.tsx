@@ -11,10 +11,8 @@ export async function GET(req: NextRequest) {
 	const fontData = await font;
 	const { searchParams } = req.nextUrl;
 	let title = searchParams.get("title");
-	let theme = searchParams.get("theme");
 
 	title = title ? title : "Hello 🐱";
-	theme = theme === "dark" ? theme : "light";
 
 	return new ImageResponse(
 		(
@@ -26,7 +24,7 @@ export async function GET(req: NextRequest) {
 					flexDirection: "column",
 					alignItems: "center",
 					justifyContent: "center",
-					backgroundImage: `url(${getHostURL()}/meta/og-${theme}.png)`,
+					backgroundImage: `url(${getHostURL()}/meta/og-light.png)`,
 					backgroundSize: "cover",
 				}}
 			>
@@ -37,7 +35,7 @@ export async function GET(req: NextRequest) {
 						fontSize: 55,
 						letterSpacing: "-0.03em",
 						fontStyle: "normal",
-						color: theme === "dark" ? "#f2f4f5" : "#171722",
+						color: "#171722",
 						lineHeight: "90px",
 						whiteSpace: "pre-wrap",
 						padding: "0 120px",

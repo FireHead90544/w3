@@ -2,10 +2,12 @@
     "name": "Rudransh Joshi",
     "description": "Just a typical 'relatable' guy you can't relate to.",
     "image": "/meta/og-default.png",
-    "github": "FireHead90544",
-    "linkedin": "rudraxd",
-    "twitter": "_rudra_xd_",
-    "mail": "rudranshjoshi1806@gmail.com",
+    "socials": {
+        "github": "FireHead90544",
+        "linkedin": "rudraxd",
+        "twitter": "_rudra_xd_",
+        "mail": "rudranshjoshi1806@gmail.com"
+    },
     "header": {
         "nick": "rudra",
         "highlight": "xd"
