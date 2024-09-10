@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: infoMeta.name,
     description: infoMeta.description,
-    creator: `@${infoMeta.twitter}`,
+    creator: `@${infoMeta.socials.twitter}`,
     images: infoMeta.image
   }
 };
@@ -48,10 +48,10 @@ export default function RootLayout({
               {children}
             </main>
             <Footer
-              github={`https://github.com/${infoMeta.github}`}
-              linkedin={`https://linkedin.com/in/${infoMeta.linkedin}`}
-              twitter={`https://x.com/${infoMeta.twitter}`}
-              mail={infoMeta.mail}
+              github={`https://github.com/${infoMeta.socials.github}`}
+              linkedin={`https://linkedin.com/in/${infoMeta.socials.linkedin}`}
+              twitter={`https://x.com/${infoMeta.socials.twitter}`}
+              mail={infoMeta.socials.mail}
             />
           </div>
         </ThemeProvider>
