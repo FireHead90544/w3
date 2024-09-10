@@ -3,6 +3,8 @@ import { getBlogPosts } from "@/lib/blog";
 import CustomMDX from "@/components/(layout)/CustomMDX";
 import { formatDate } from "@/lib/utils";
 import { Metadata } from "next";
+import { getHostURL } from "@/lib/misc";
+import infoMeta from "@/content/misc/meta.json";
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata | undefined> {
 	const post = getBlogPosts().find((post) => post.slug === params.slug);
@@ -47,8 +49,28 @@ export default function Post({ params }: { params: { slug: string } }) {
 		return notFound();
 	}
 
+	const hostURL = getHostURL();
+	const jsonLd = {
+		"@context": "https://schema.org",
+		"@type": "BlogPosting",
+		headline: post.metadata.title,
+		datePublished: post.metadata.publish_date,
+		dateModified: post.metadata.publish_date,
+		description: post.metadata.summary,
+		image: `${hostURL}/api/og?title=${post.metadata.title}`,
+		url: `${hostURL}/blog/${post.slug}`,
+		author: {
+			"@type": "Person",
+			name: infoMeta.name
+		}
+	}
+
 	return (
 		<section className="flex flex-col my-6 w-full">
+			<script
+				type="application/ld+json"
+				dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+			/>
 			<div className="flex flex-col space-y-8">
 				<div className="flex flex-col space-y-2">
 					<h1 className="text-3xl font-semibold">{post.metadata.title.toLowerCase()}</h1>
