@@ -61,7 +61,8 @@ export default function Post({ params }: { params: { slug: string } }) {
 		url: `${hostURL}/blog/${post.slug}`,
 		author: {
 			"@type": "Person",
-			name: infoMeta.name
+			name: infoMeta.name,
+			url: hostURL
 		}
 	}
 
