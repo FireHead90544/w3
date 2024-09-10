@@ -23,7 +23,7 @@ export default function Home() {
 		</AboutContainer>
 
 		<LinksContainer>
-			<InternalLink href={"/resume.pdf"} text="resume" fakeExternal />
+			<InternalLink href={"/resume.pdf"} text="resume" fakeExternal prefetch={false} />
 			<InternalLink href={"/work"} text="work" fakeExternal />
 			<InternalLink href={"/blog"} text="blog" fakeExternal />
 		</LinksContainer>
