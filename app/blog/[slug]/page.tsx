@@ -2,6 +2,36 @@ import { notFound } from "next/navigation";
 import { getBlogPosts } from "@/lib/blog";
 import CustomMDX from "@/components/(layout)/CustomMDX";
 import { formatDate } from "@/lib/utils";
+import { Metadata } from "next";
+
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata | undefined> {
+	const post = getBlogPosts().find((post) => post.slug === params.slug);
+	if (!post) {
+		return;
+	}
+
+	const { title, summary, publish_date } = post.metadata;
+	const ogImage = `/api/og?title=${title}`;
+
+	return {
+		title,
+		description: summary,
+		openGraph: {
+			title,
+			description: summary,
+			type: "article",
+			publishedTime: publish_date,
+			url: `/blog/${post.slug}`,
+			images: ogImage
+		},
+		twitter: {
+			card: "summary_large_image",
+			title,
+			description: summary,
+			images: ogImage
+		}
+	}
+}
 
 export async function generateStaticParams() {
 	const posts = getBlogPosts().map((post) => (
