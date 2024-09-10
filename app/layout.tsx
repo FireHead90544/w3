@@ -3,6 +3,7 @@ import { Roboto } from "next/font/google";
 import { ThemeProvider } from "@/components/(theme)/ThemeProvider";
 import Header from "@/components/(layout)/Header";
 import Footer from "@/components/(layout)/Footer";
+import Analytics from "@/components/(misc)/Analytics";
 import "./globals.css";
 import infoMeta from "@/content/misc/meta.json";
 import { getHostURL } from "@/lib/misc";
@@ -56,6 +57,7 @@ export default function RootLayout({
           </div>
         </ThemeProvider>
       </body>
+      <Analytics />
     </html>
   );
 }
