@@ -7,11 +7,11 @@ import Table from '@/components/(mdx)/Table'
 import createHeading from '@/components/(mdx)/Heading'
 
 const components = {
-  h1: createHeading(1),
-  h2: createHeading(2),
-  h3: createHeading(3),
-  h4: createHeading(4),
-  h5: createHeading(5),
+  h1: createHeading(2),
+  h2: createHeading(3),
+  h3: createHeading(4),
+  h4: createHeading(5),
+  h5: createHeading(6),
   h6: createHeading(6),
   img: RoundedImage,
   a: CustomLink,

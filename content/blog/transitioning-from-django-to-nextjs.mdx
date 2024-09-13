@@ -1,0 +1,83 @@
+---
+title: "Transitioning from Django to Next.js: How and why I switched?"
+summary: SEO Friendly Description
+publish_date: 2024-09-13
+---
+
+Konnichiwa, Rudransh-desu! Welp, at this point I'm pretty sure you've tried stalking a bit too much about me and I'd say that's not a surprise to me. I'm indeed cool, heh. So, let's quickly skip the formalities. As you might know, I recently switched from django to Next.js completely (though I'm not really planning to demolish my last portfolio website at the moment, I'll probably archive it near future), I'd document all my insights, metrics and experiences.
+
+# Me and my insanity
+
+When it comes to tech, I'm really insane about trying out different tech and tools, just because I like implementing everything my own way. While you can find more about my insanity through my [works](/work), I'd stick to discussing about my portfolio website here.
+
+I've tried several tech stacks in the past to design my portfolio starting with vanilla html+css+js, trying out css frameworks like bootstrap, bulma and finally sticking to tailwind. Then I moved onto Flask utilizing python as backend (because that's my feels-me-language haha). While it had it's own set of shortcomings, the OCD to try out new stack kicked in. I switched to django+tailwindcss and rewrote my entire portfolio from scratch using it which you can find at [rudra.is-a.dev](https://rudra.is-a.dev/). I wrote a full-fledged backend consisting of:
+
+- A beautiful UI
+- User Authentication + Dashboard
+- Custom blog w/ rich text editor
+- A portfolio showcase
+- Likes & comments integration
+- Webhook events
+- Timeline + Links manager
+- And a bunch of other cool stuff.
+
+An year passed, and I realized ***"Ah fuk, I don't really need all that fancy crap stuff which nobody actually uses"***
+
+# Then came the minimalism
+
+An year later, the sudden urge to switch the stack and rewrote everything kicked in again and that's when I realized I've lost interest in all that fancy-pancy stuff. **Minimalism is the modernism** and viola, before I could even realize, I was rewriting everything entirely in JavaScript (my sworn enemy). But as once a wise man said ***"yesterday's enemy is tomorrow's friend"*** (PS: I was that wise man xD), I chose to utilize React.js for designing my frontend alongwith Next.js as my core backend.
+
+I really hate how react advertises themselves as ***Create stunning/beautiful UIs with react blah blah***, trust me it's not that fancy. Under the hood, you really gotta use CSS to style everything. Yes, scam it is, noe? Anyways since I was gonna use tailwindcss+shadcn that wasn't gonna be a problem for me. I have had some experience with Next.js & React + Tailwind in the past since I've developed a few stuff utilizing these *tech of the modern era (pun intended)*, Check out [Pookiefy](https://pookiefy.vercel.app).
+
+# Next.js + React + TailwindCSS + ShadCN
+
+Ah, I keep getting out of the track. So yes, I quickly setted up  Next.js v14 (app router) + tailwind using the official template bootstraped with `create-next-app`, added ShadCN to utilize reusable components. At the start, I had nothing in mind, no thoughts about the design of the UI. And I was ready to dump this project, boom. Over. Nani?? JKJK, I took heavy inspiration from my friend arunava a.k.a [ag's website](https://beta.vimfn.in/) (his new one is quite cool as well) and created a rough sketch of how I was gonna implement mine.
+
+I started with designing the homepage keeping in mind that everything was gonna be minimal this time (to the point, I made almost everything lowercase heh). Initialized with creating the Header & Footer components which I was satisfied with, I completed the homepage adding bunch of stuff and the finalizing it. Also implemented the theme switcher (which was the only client component then). Throughout the course of time, I fixed many of the bugs and issues related to the ui, added several stuff on the homepage (adding fun fact component was quite cool + i really had fun designing the footer). Finally it was over, and trust me till this point, I really am proud of myself for designing such a cool minimalistic homepage. Finally, I added the links to navigate to other pages (which I started developing later) and I was done with it.
+
+## The work and project showcase
+
+Next up, I thought of a design for the work page, It was easy to think but tool a lot time to actually implement because my attention-deficit a-💀 was triggering to fix the UI again and again. Finally I tested it out by adding bunch of dummy projects and I was satisfied with it. Later, I modularized everything and setted up a `content` directory to read data from and finally I added my actual project details and it was done.
+
+# Then came the hero - MDX Blog
+
+This section took a hella lot time to finish. while I was reading the Next.js docs, I suddenly found about MDX (which is basically React extension for markdown). Since I was already planning to use markdown for blog, it was like a boon to me. Trust me, the starting was hella frustrating figuring out the implementation details, the docs weren't that helpful at the start but after fiddling and struggling a lot, I finally figured everything out and implemented this blog utilizing MDX.js **(OUR CODE 😂)**. When I was messing up my brain trying to style everything, I also came across the `@tailwindcss/typography` plugin. It was a life-saver, almost 90% of the styling was done without me having to do anything. I was heppi, I was satisfied. Then, I had to customize the style of a few stuff including the links, images, tables and most importantly the code blocks.
+
+Again, code blocks were the source of frustration, I read several blog posts and found about `bright.js`, it was cool, easy to implement and just perfect for my use case. Along with using `gray-matter` for frontmatter and metadata parsing, I used `bright.js` to highlight my code blocks. Andddd.. I was done with the blog section as well after bunch of testing, optimizations and bug fixes.
+
+# Templating and SEO
+
+I was almost done with the entire website, but then I thought, since it's gonna be open source why not make it templatable. So I refactored everything and made it so that everything was modularized and templated. The `content` directory was set up to be the directory to pull everything from. And, that part was done as well.
+
+Then came the SEO, I had to optimize the website for SEO and better search rankings. Implementing it wasn't that challenging since I was already keeping everything either static or server rendered. I wasn't gonna use client-side rendering as it affected SEO and I wasn't really planning to do much of dynamic things on the client side that I needed to keep the whole page client-side rendered. So in most cases, it was either static route, or server-side rendered (SSR)
+
+For static routes, I just had to export the `metadata` object and it was done. For dynamic routes (which were rendered server-side on demand), I had to export a `generateMetadata` function which dynamically created the metadata for such pages (blog posts in my case). 
+
+The metadata was easy to set up but as for the opengraph and twitter cards, I created a simple API endpoint to generate the images on the fly using the `next/og` package and can be tried at [/api/og](/api/og?title=Never+Gonna+Give+You+Up)
+
+I later switched from server side rendering (SSR) the blog posts to static site generation (SSG) as it generated those pages at the build time so that they can be cached for faster load times. I achieved it by exporting a `generateStaticParams` function.
+
+Then, I defined the schema for my content using JSON-LD and finally I setted up the `sitemap.xml` and `robots.txt` dynamically and uploaded the `favicon.ico` and such stuff.
+
+## Umami x Analytics
+
+Google analytics wasn't the cut for me, I wanted to keep everything open source and privacy friendly, so I chose to use Umami for analytics management. I got setting up the cloud version of umami and added the tracking code to my website (which would track analytics on production build only) and setted up setted up the environment variables and secrets to keep the sensitive data secure. 
+
+# Deployment
+
+Last but not least, I had been using Vercel to deploy my Next.js projects for a while now and while working on this project, I was using Vercel for the same due to the generous free-tier quota (which I definitely wasn't gonna exhaust in the near future). I had setted up the CI/CD pipeline to automatically deploy the project on push to the github repository (I was following the `checkout-push-pr-fetch-merge` workflow to test out new features bit by bit). With that, I was done with everything.
+
+# Comparing Metrics & Insights: Django vs Next.js
+
+I used Google Page Speed Insights to continously test the performance of my new portfolio website while it was under development to optimize it as much as I could. Finally, I compared the metrics of my old portfolio written in django with the new one written with Next.js and here are the results:
+
+#### **INSERT THE COMPARISION/INSIGHTS HERE**
+
+
+In near future, I'll switch to a top-level domain (TLD) and also use Google Search Console to monitor search performance. I'll also be adding a few more features including the page switcher (Ctrl+K), guestbook, etc.
+
+---
+
+*Whoosh! That was a challenging yet fun journey and I think I did a really great job with  that. I'm really proud of myself for designing such a cool yet minimalistic website in such a short time. I'm indeed cool ngl, eh? And that's it, I was really willing to write a blog post in my own style and I finally did a proper one. Thanks for giving it a read, meow!*
+
+***Until next time, Sayonara! 🐱‍👤***
