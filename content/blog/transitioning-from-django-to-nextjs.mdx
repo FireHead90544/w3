@@ -1,16 +1,16 @@
 ---
 title: "Transitioning from Django to Next.js: Minimalism, Madness and Metrics"
-summary: SEO Friendly Description
-publish_date: 2024-09-13
+summary: Explore my journey transitioning from Django to Next.js, including a detailed performance and implementation comparison. Discover insights, metrics, and why I embraced minimalism and React for my portfolio website redesign.
+publish_date: 2024-09-15
 ---
 
 ![Transitioning from Django to Next.js](/api/og?title=Transitioning+from+Django+to+Next.js)
 
-Konnichiwa, Rudransh-desu! Welp, at this point I'm pretty sure you've tried stalking a bit too much about me and I'd say that's not a surprise to me. I'm indeed cool, heh. So, let's quickly skip the formalities. As you might know, I recently switched from django to Next.js completely (though I'm not really planning to demolish my last portfolio website at the moment, I'll probably archive it near future), I'd document all my insights, metrics and experiences.
+Konnichiwa, Rudransh-desu! Welp, at this point I'm pretty sure you've tried stalking a bit too much and I'd say that's not new to me. I'm indeed cool, heh. So, let's quickly skip the formalities. As you might know, I recently switched from django to Next.js completely (though I'm not really planning to demolish my last portfolio website at the moment, I'll probably archive it near future), I'd document all my insights, metrics and experiences of the transition here.
 
 # Me and my insanity
 
-When it comes to tech, I'm really insane about trying out different tech and tools, just because I like implementing everything my own way. While you can find more about my insanity through my [works](/work), I'd stick to discussing about my portfolio website here.
+When it comes to tech, I'm really insane about trying out different stack and tools, just because I like implementing everything my own way. While you can find more about my insanity through my [works](/work), I'd stick to discussing about rewriting my portfolio website here.
 
 I've tried several tech stacks in the past to design my portfolio starting with vanilla html+css+js, trying out css frameworks like bootstrap, bulma and finally sticking to tailwind. Then I moved onto Flask utilizing python as backend (because that's my feels-me-language haha). While it had it's own set of shortcomings, the OCD to try out new stack kicked in. I switched to django+tailwindcss and rewrote my entire portfolio from scratch using it which you can find at [rudra.is-a.dev](https://rudra.is-a.dev/). I wrote a full-fledged backend consisting of:
 
@@ -78,7 +78,7 @@ I used Google Page Speed Insights to continously test the performance of my new 
 The page insight scores are based on the Lighthouse audit results. The scores are out of 100 and higher scores are better. The scores are based on the performance, accessibility, best practices and SEO of the website.
 
 <Table data={{
-    headers: ["*", "Django (Mobile)", "Next.js (Mobile)", "Django (Desktop)", "Next.js (Desktop)"],
+    headers: ["Audit", "Django (Mobile)", "Next.js (Mobile)", "Django (Desktop)", "Next.js (Desktop)"],
     rows: [
         ["Performance", "36", "96", "76", "100"],
         ["Accessibility", "87", "91", "87", "91"],
