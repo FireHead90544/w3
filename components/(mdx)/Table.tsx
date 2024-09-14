@@ -12,12 +12,14 @@ const Table = ({ data }: any) => {
 	));
 
 	return (
-		<table>
-			<thead>
-				<tr>{headers}</tr>
-			</thead>
-			<tbody>{rows}</tbody>
-		</table>
+		<div className="overflow-x-auto">
+			<table>
+				<thead>
+					<tr>{headers}</tr>
+				</thead>
+				<tbody>{rows}</tbody>
+			</table>
+		</div>
 	);
 }
 
