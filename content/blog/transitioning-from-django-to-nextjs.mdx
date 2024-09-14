@@ -1,8 +1,10 @@
 ---
-title: "Transitioning from Django to Next.js: How and why I switched?"
+title: "Transitioning from Django to Next.js: Minimalism, Madness and Metrics"
 summary: SEO Friendly Description
 publish_date: 2024-09-13
 ---
+
+![Transitioning from Django to Next.js](/api/og?title=Transitioning+from+Django+to+Next.js)
 
 Konnichiwa, Rudransh-desu! Welp, at this point I'm pretty sure you've tried stalking a bit too much about me and I'd say that's not a surprise to me. I'm indeed cool, heh. So, let's quickly skip the formalities. As you might know, I recently switched from django to Next.js completely (though I'm not really planning to demolish my last portfolio website at the moment, I'll probably archive it near future), I'd document all my insights, metrics and experiences.
 
@@ -57,9 +59,9 @@ The metadata was easy to set up but as for the opengraph and twitter cards, I cr
 
 I later switched from server side rendering (SSR) the blog posts to static site generation (SSG) as it generated those pages at the build time so that they can be cached for faster load times. I achieved it by exporting a `generateStaticParams` function.
 
-Then, I defined the schema for my content using JSON-LD and finally I setted up the `sitemap.xml` and `robots.txt` dynamically and uploaded the `favicon.ico` and such stuff.
+Making links, buttons, etc. accessible for screen-readers and other assitive tools wasn't that hard. After wrapping up the accessibility optimizations, I defined the schema for my content using JSON-LD and finally setted up the `sitemap.xml`, `robots.txt` dynamically & uploaded the `favicon.ico`, icons and other opengraph assets.
 
-## Umami x Analytics
+## Ah yes, Umami for analytics
 
 Google analytics wasn't the cut for me, I wanted to keep everything open source and privacy friendly, so I chose to use Umami for analytics management. I got setting up the cloud version of umami and added the tracking code to my website (which would track analytics on production build only) and setted up setted up the environment variables and secrets to keep the sensitive data secure. 
 
@@ -69,12 +71,51 @@ Last but not least, I had been using Vercel to deploy my Next.js projects for a 
 
 # Comparing Metrics & Insights: Django vs Next.js
 
-I used Google Page Speed Insights to continously test the performance of my new portfolio website while it was under development to optimize it as much as I could. Finally, I compared the metrics of my old portfolio written in django with the new one written with Next.js and here are the results:
+I used Google Page Speed Insights to continously test the performance of my new portfolio website while it was under development to optimize it as much as I could. Finally, I compared the metrics of my old portfolio written in django with the new one written with Next.js and here are the results for the landing page:
 
-#### **INSERT THE COMPARISION/INSIGHTS HERE**
+## Insights
 
+The page insight scores are based on the Lighthouse audit results. The scores are out of 100 and higher scores are better. The scores are based on the performance, accessibility, best practices and SEO of the website.
+
+<Table data={{
+    headers: ["*", "Django (Mobile)", "Next.js (Mobile)", "Django (Desktop)", "Next.js (Desktop)"],
+    rows: [
+        ["Performance", "36", "96", "76", "100"],
+        ["Accessibility", "87", "91", "87", "91"],
+        ["Best Practices", "100", "100", "100", "100"],
+        ["SEO", "83", "100", "83", "100"]
+    ]
+}} />
+
+
+## Performance Metrics
+
+1. **First Contentful Paint:** First contentful paint marks the time at which the first text or image is painted.
+2. **Largest Contentful Paint:** Largest Contentful Paint marks the time at which the largest text or image is painted.
+3. **Total Blocking Time:** Sum of all time periods between FCP and Time to Interactive, when task length exceeded 50ms, expressed in milliseconds.
+4. **Cumulative Layout Shift:** Cumulative Layout Shift measures the movement of visible elements within the viewport.
+5. **Speed Index:** Speed Index shows how quickly the contents of a page are visibly populated.
+
+<Table data={{
+    headers: ["Metric", "Django (Mobile)", "Next.js (Mobile)", "Django (Desktop)", "Next.js (Desktop)"],
+    rows: [
+        ["First Contentful Paint", "5.7s", "1.6s", "1.3s", "0.4s"],
+        ["Largest Contentful Paint", "17.2s", "2.4s", "3.0s", "0.6s"],
+        ["Total Blocking Time", "1,130ms", "140ms", "10ms", "0ms"],
+        ["Cumulative Layout Shift", "0", "0", "0", "0"],
+        ["Speed Index", "6.8s", "1.6s", "2.1s", "0.4s"]
+    ]
+}} />
 
 In near future, I'll switch to a top-level domain (TLD) and also use Google Search Console to monitor search performance. I'll also be adding a few more features including the page switcher (Ctrl+K), guestbook, etc.
+
+Here's my final thoughts on the transition:
+
+- ***Should you dump django?***
+> Probably not. But if you've the fever to try out new tech and go insane optimizing everything, you would want to give Next.js a try.
+
+- ***Would I use django again?***
+> Definitely if I'm working on heavy-pythonic stuff. Otherwise, I'd be using Next.js out of the box. (PS: FastAPI + Next.js is also a cool combo which I use when working with LLM apps)
 
 ---
 
