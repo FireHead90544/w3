@@ -14,8 +14,8 @@ const RoundedImage = (props: Readonly<RoundedImageProps>) => {
   return (
     <Image
       className={cn('rounded-lg', props.center && 'mx-auto' )} {...props}
-      {...(props.width ? { width: props.width } : {width: 200})}
-      {...(props.height ? { height: props.height } : {height: 200})}
+      {...(props.width ? { width: props.width } : { width: 1200 })}
+      {...(props.height ? { height: props.height } : { height: 630 })}
     />
   )
 }
