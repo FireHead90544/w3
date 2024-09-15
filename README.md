@@ -1,14 +1,63 @@
 # w3
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+My awesome portfolio website redesigned & built with Next.js + React + TailwindCSS + ShadCN + MDX.
+
+- [Live Demo](https://w3rudra.vercel.app/)
+- Clean, minimal & modern UI
+- Performance & SEO friendly
+- Highly customizable and templatable, pulls data from `content/` directory
+- Blog powered with MDX.js
+- Work/Project showcase
+- API based opengraph image generation
+- Web analytics
 
 ## Getting Started
 
-Setup environment variables.
+### Installation
 
-- `HOST_DOMAIN` (No need if hosted on vercel or testing on localhost), for example: `mydomain.xyz`
-- `NEXT_PUBLIC_UMAMI_WEBSITE_ID` (do not set if don't want to use analytics, for example: `xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx`)
-- `NEXT_PUBLIC_UMAMI_URL` (do not set if don't want to use analytics, for example: `https://cloud.umami.is`)
+1. Clone the repository:
+
+    ```bash
+    git clone https://github.com/FireHead90544/w3.git
+    cd w3
+    ```
+
+2. Install dependencies:
+
+    ```bash
+    npm install
+    # or
+    yarn install
+    ```
+
+### Setup Environment Variables
+
+Create a `.env.local` file in the root directory (or setup your production environment) and add the following environment variables:
+
+| Environment Variable           | Required?                              | Example                                |
+|--------------------------------|----------------------------------------|----------------------------------------|
+| `HOST_DOMAIN`                  | No, if hosting on Vercel/localhost     | `mydomain.xyz`                         |
+| `NEXT_PUBLIC_UMAMI_WEBSITE_ID` | No, if you don't want to use analytics | `xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx` |
+| `NEXT_PUBLIC_UMAMI_URL`        | No, if you don't want to use analytics | `https://cloud.umami.is`               |
+
+### Setup Content/Template Data
+
+Ensure the following files inside the `content` folder are set up correctly for data to be used in templates:
+
+- `content/misc/meta.json`: Metadata, Template Data
+- `content/misc/facts.json`: Fun Facts About You
+- `content/work/projects.json`: Project Showcase Data
+
+### Setup Assets
+
+Ensure the following assets are present in the `public` folder to be used by the application:
+
+- `public/fonts/*.ttf`: Fonts used with the OpenGraph Image generation API
+- `public/meta/og-default.png`: Default OpenGraph Image for Metadata
+- `public/meta/og-light.png`: Image Template to be used with OpenGraph Image generation API
+- `public/resume.pdf`: Your good ol' resume
+
+### Running the Development Server
 
 First, run the development server:
 
@@ -24,21 +73,12 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Deploy
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+You can deploy this app on Vercel in a single click by using the button below.
 
-## Learn More
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FFireHead90544%2Fw3&env=NEXT_PUBLIC_UMAMI_WEBSITE_ID,NEXT_PUBLIC_UMAMI_URL&envDescription=UMAMI%20Integration%20for%20Web%20Analytics&envLink=https%3A%2F%2Fgithub.com%2FFireHead90544%2Fw3%2Ftree%2Fmain%2FREADME.md%23setup-environment-variables)
 
-To learn more about Next.js, take a look at the following resources:
+## LICENSE
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This project is licensed under the Apache LICENSE 2.0. You can find it [here](https://github.com/FireHead90544/w3/blob/main/LICENSE).
