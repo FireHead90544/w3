@@ -6,7 +6,7 @@ publish_date: 2024-09-15
 
 ![Transitioning from Django to Next.js](/api/og?title=Transitioning+from+Django+to+Next.js)
 
-Konnichiwa, Rudransh-desu! Welp, at this point I'm pretty sure you've tried stalking a bit too much and I'd say that's not new to me. I'm indeed cool, heh. So, let's quickly skip the formalities. As you might know, I recently switched from django to Next.js completely (though I'm not really planning to demolish my last portfolio website at the moment, I'll probably archive it near future), I'd document all my insights, metrics and experiences of the transition here.
+Konnichiwa, Rudransh-desu! Welp, at this point I'm pretty sure you've tried stalking a bit too much and I'd say that's not new to me. I'm indeed cool, heh. So, let's quickly skip the formalities. I recently switched from django to Next.js completely (though I'm not really planning to demolish my last portfolio website at the moment, I'll probably archive it near future), this is the documentation of all my insights, metrics and experiences of the transition here.
 
 # Me and my insanity
 
@@ -27,7 +27,7 @@ An year passed, and I realized ***"Ah fuk, I don't really need all that fancy cr
 
 # Then came the minimalism
 
-An year later, the sudden urge to switch the stack and rewrote everything kicked in again and that's when I realized I've lost interest in all that fancy-pancy stuff. **Minimalism is the modernism** and viola, before I could even realize, I was rewriting everything entirely in JavaScript (my sworn enemy). But as once a wise man said ***"yesterday's enemy is tomorrow's friend"*** (PS: I was that wise man xD), I chose to utilize React.js for designing my frontend alongwith Next.js as my core backend.
+An year later, the sudden urge to switch the stack and rewrite everything kicked in again and that's when I realized I've lost interest in all that fancy-pancy stuff. **Minimalism is the modernism** and viola, before I could even realize, I was rewriting everything entirely in JavaScript (my sworn enemy). But as once a wise man said ***"yesterday's enemy is tomorrow's friend"*** (PS: I was that wise man xD), I chose to utilize React.js for designing my frontend alongwith Next.js as my core backend.
 
 I really hate how react advertises themselves as ***Create stunning/beautiful UIs with react blah blah***, trust me it's not that fancy. Under the hood, you really gotta use CSS to style everything. Yes, scam it is, noe? Anyways since I was gonna use tailwindcss+shadcn that wasn't gonna be a problem for me. I have had some experience with Next.js & React + Tailwind in the past since I've developed a few stuff utilizing these *tech of the modern era (pun intended)*, Check out [Pookiefy](https://pookiefy.vercel.app).
 
@@ -35,17 +35,17 @@ I really hate how react advertises themselves as ***Create stunning/beautiful UI
 
 Ah, I keep getting out of the track. So yes, I quickly setted up  Next.js v14 (app router) + tailwind using the official template bootstraped with `create-next-app`, added ShadCN to utilize reusable components. At the start, I had nothing in mind, no thoughts about the design of the UI. And I was ready to dump this project, boom. Over. Nani?? JKJK, I took heavy inspiration from my friend arunava a.k.a [ag's website](https://beta.vimfn.in/) (his new one is quite cool as well) and created a rough sketch of how I was gonna implement mine.
 
-I started with designing the homepage keeping in mind that everything was gonna be minimal this time (to the point, I made almost everything lowercase heh). Initialized with creating the Header & Footer components which I was satisfied with, I completed the homepage adding bunch of stuff and the finalizing it. Also implemented the theme switcher (which was the only client component then). Throughout the course of time, I fixed many of the bugs and issues related to the ui, added several stuff on the homepage (adding fun fact component was quite cool + i really had fun designing the footer). Finally it was over, and trust me till this point, I really am proud of myself for designing such a cool minimalistic homepage. Finally, I added the links to navigate to other pages (which I started developing later) and I was done with it.
+I started with designing the homepage keeping in mind that everything was gonna be minimal this time (to the point, I made almost everything lowercase heh). Initialized with creating the Header & Footer components which I was satisfied with, I completed the homepage after adding bunch of stuff and finalized it. Also implemented the theme switcher (which was the only client component then). Throughout the course of time, I fixed many of the bugs and issues related to the ui, added several stuff on the homepage (adding fun fact component was quite cool + i really had fun designing the footer). Finally it was over, and trust me till this point, I really am proud of myself for designing such a cool minimalistic homepage. Finally, I added the links to navigate to other pages (which I started developing later) and I was done with it.
 
 ## The work and project showcase
 
-Next up, I thought of a design for the work page, It was easy to think but tool a lot time to actually implement because my attention-deficit a-💀 was triggering to fix the UI again and again. Finally I tested it out by adding bunch of dummy projects and I was satisfied with it. Later, I modularized everything and setted up a `content` directory to read data from and finally I added my actual project details and it was done.
+Next up, I thought of a design for the work page, It was easy to think but took a lot time to actually implement because my attention-deficit a-💀 was triggering to change the UI again and again. Finally I tested it out by adding bunch of dummy projects and I was satisfied with it. Later, I modularized everything and setted up a `content` directory to read data from and finally I added my actual project details and it was done.
 
 # Then came the hero - MDX Blog
 
-This section took a hella lot time to finish. while I was reading the Next.js docs, I suddenly found about MDX (which is basically React extension for markdown). Since I was already planning to use markdown for blog, it was like a boon to me. Trust me, the starting was hella frustrating figuring out the implementation details, the docs weren't that helpful at the start but after fiddling and struggling a lot, I finally figured everything out and implemented this blog utilizing MDX.js **(OUR CODE 😂)**. When I was messing up my brain trying to style everything, I also came across the `@tailwindcss/typography` plugin. It was a life-saver, almost 90% of the styling was done without me having to do anything. I was heppi, I was satisfied. Then, I had to customize the style of a few stuff including the links, images, tables and most importantly the code blocks.
+This section took a hella lot time to finish. while I was reading the Next.js docs, I suddenly found about MDX (which is basically JSX extension for markdown). Since I was already planning to use markdown for blog, it was like a boon to me. Trust me, the starting was hella frustrating figuring out the implementation details, the docs weren't that helpful at the start but after fiddling and struggling a lot, I finally figured everything out and implemented this blog utilizing MDX.js **(OUR CODE 😂)**. When I was messing up my brain trying to style everything, I also came across the `@tailwindcss/typography` plugin. It was a life-saver, almost 90% of the styling was done without me having to do anything. I was heppi, I was satisfied. Then, I had to customize the style of a few stuff including the links, images, tables and most importantly the code blocks.
 
-Again, code blocks were the source of frustration, I read several blog posts and found about `bright.js`, it was cool, easy to implement and just perfect for my use case. Along with using `gray-matter` for frontmatter and metadata parsing, I used `bright.js` to highlight my code blocks. Andddd.. I was done with the blog section as well after bunch of testing, optimizations and bug fixes.
+Again, code blocks were the source of frustration, I read several articles and found about `bright.js`, it was cool, easy to implement and just perfect for my use case. Along with using `gray-matter` for frontmatter and metadata parsing, I used `bright.js` to highlight my code blocks. Andddd.. I was done with the blog section as well after bunch of testing, optimizations and bug fixes.
 
 # Templating and SEO
 
@@ -63,7 +63,7 @@ Making links, buttons, etc. accessible for screen-readers and other assitive too
 
 ## Ah yes, Umami for analytics
 
-Google analytics wasn't the cut for me, I wanted to keep everything open source and privacy friendly, so I chose to use Umami for analytics management. I got setting up the cloud version of umami and added the tracking code to my website (which would track analytics on production build only) and setted up setted up the environment variables and secrets to keep the sensitive data secure. 
+Google analytics wasn't the cut for me, I wanted to keep everything open source and privacy friendly, so I chose to use Umami for analytics management. I got setting up the cloud version of umami and added the tracking code to my website (which would track analytics on production build only) and configured the environment variables and secrets to keep the sensitive data secure. 
 
 # Deployment
 
