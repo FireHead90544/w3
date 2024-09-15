@@ -57,6 +57,20 @@ Ensure the following assets are present in the `public` folder to be used by the
 - `public/meta/og-light.png`: Image Template to be used with OpenGraph Image generation API
 - `public/resume.pdf`: Your good ol' resume
 
+### Setup Blog
+
+To create a post with the url `/blog/post-slug`, create `content/blog/post-slug.mdx` with the following data:
+
+```mdx
+---
+title: Post Title
+summary: SEO Friendly Description
+publish_date: YYYY-MM-DD
+---
+
+# MDX Friendly Post Content Here
+```
+
 ### Running the Development Server
 
 First, run the development server:
