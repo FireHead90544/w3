@@ -1,6 +1,22 @@
 {
     "projects": [
         {
+            "title": "popkiz",
+            "description": "highly customizable stage-based react app to wish your favorite ones in style, built w/ typescript + react.",
+            "source": "https://github.com/FireHead90544/PopKiz/",
+            "status": "deployment",
+            "status_url": "https://FireHead90544.github.io/PopKiz/",
+            "released_by": "2024-11"
+        },
+        {
+            "title": "papertrail",
+            "description": "team that1bit's submission under problem statement SIH1614 for SIH2024. a web app built with typescript + next.js + react to summarize a faculty member's tex-based academic records using an llm.",
+            "source": "https://github.com/FireHead90544/papertrail/",
+            "status": "deployment",
+            "status_url": "https://papertrailbythat1bit.vercel.app/",
+            "released_by": "2024-10"
+        },
+        {
             "title": "w3",
             "description": "my cool & minimal portfolio revamped w/ next.js + react + tailwindcss optimized for performance + seo.",
             "source": "https://github.com/FireHead90544/w3/",
