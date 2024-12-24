@@ -1,6 +1,14 @@
 {
     "projects": [
         {
+            "title": "retrocord",
+            "description": "discord, redesigned in windows-98 style for codedex mini holiday hackathon 2024 under the 'dot-com' boom track, built w/ typescript + next.js + react + css.",
+            "source": "https://github.com/FireHead90544/RetroCord",
+            "status": "deployment",
+            "status_url": "https://tryretrocord.vercel.app/",
+            "released_by": "2024-12"
+        },
+        {
             "title": "popkiz",
             "description": "highly customizable stage-based react app to wish your favorite ones in style, built w/ typescript + react.",
             "source": "https://github.com/FireHead90544/PopKiz/",
