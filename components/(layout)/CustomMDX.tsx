@@ -26,7 +26,13 @@ interface MDXProps {
 
 const CustomMDX = (props: MDXProps) => {
   return (
-    <MDXRemote {...props} components={{ ...components, ...(props.components || {}) }} />
+    <MDXRemote {...props} 
+      components={{ ...components, ...(props.components || {}) }}
+      options={{ 
+        blockJS: false, // Since we're authoring ourselves, we're disabling it until we migrate to @next/mdx
+        blockDangerousJS: true // One RCE and you're fucked
+      }}
+    />
   )
 }
 

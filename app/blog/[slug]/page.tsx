@@ -6,16 +6,17 @@ import { Metadata } from "next";
 import { getHostURL } from "@/lib/misc";
 import infoMeta from "@/content/misc/meta.json";
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata | undefined> {
-	const post = getBlogPosts().find((post) => post.slug === params.slug);
-	if (!post) {
+export async function generateMetadata(props: { params: Promise<{ slug: string }> }): Promise<Metadata | undefined> {
+    const params = await props.params;
+    const post = getBlogPosts().find((post) => post.slug === params.slug);
+    if (!post) {
 		return;
 	}
 
-	const { title, summary, publish_date } = post.metadata;
-	const ogImage = `/api/og?title=${title}`;
+    const { title, summary, publish_date } = post.metadata;
+    const ogImage = `/api/og?title=${title}`;
 
-	return {
+    return {
 		title,
 		description: summary,
 		openGraph: {
@@ -43,14 +44,15 @@ export async function generateStaticParams() {
 	return posts
 }
 
-export default function Post({ params }: { params: { slug: string } }) {
-	const post = getBlogPosts().find((post) => post.slug === params.slug);
-	if (!post) {
+export default async function Post(props: { params: Promise<{ slug: string }> }) {
+    const params = await props.params;
+    const post = getBlogPosts().find((post) => post.slug === params.slug);
+    if (!post) {
 		return notFound();
 	}
 
-	const hostURL = getHostURL();
-	const jsonLd = {
+    const hostURL = getHostURL();
+    const jsonLd = {
 		"@context": "https://schema.org",
 		"@type": "BlogPosting",
 		headline: post.metadata.title,
@@ -66,7 +68,7 @@ export default function Post({ params }: { params: { slug: string } }) {
 		}
 	}
 
-	return (
+    return (
 		<section className="flex flex-col my-6 w-full">
 			<script
 				type="application/ld+json"
