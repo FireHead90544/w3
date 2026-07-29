@@ -1,6 +1,6 @@
 {
     "name": "Rudransh Joshi",
-    "description": "Heyaa! I'm a FOSS developer passionate about AI & ML, deep learning, and neural networks. Explore my minimalistic portfolio showcasing my works, dive into tech insights through my writings, and connect with me on social media.",
+    "description": "Heyaa! I'm a AI/ML engineer with 7+ years of experience in writing clean & structured code and building autonomous systems that scale. Passionate about AI, Deep Learning, and LLMs. Explore my minimalistic portfolio, read my tech insights, and let's connect!",
     "image": "/meta/og-default.png",
     "socials": {
         "github": "FireHead90544",
@@ -13,9 +13,9 @@
         "highlight": "xd"
     },
     "profile": {
-        "about": "Hi, I'm rudransh. A software engineer majoring in AI&ML. My field of research and interest lie in machine learning (more specifically, deep learning). Neural Networks, LLMs and Calculus fascinate me a lot. I frequently contribute to open source development. Feel free to check out my work, blog or maybe just sign the guestbook, eh?",
-        "role": "FOSS Developer",
-        "work": "Building LLM Apps",
+        "about": "Hi, I'm Rudransh. An AI/ML engineer with substantial experience of 7+ years in writing clean & structured code. I design, build & deploy autonomous systems that scale. My field of research and interest lie in Deep Neural Networks, Multi-Agent Autonomous Systems, LLMs & Reinforcement Learning. I like Calculus & Cats, and also frequently contributing to open source development. Feel free to check out my work, blog or maybe just sign the guestbook, eh?",
+        "role": "AI/ML Engineer",
+        "work": "Building Autonomous Systems",
         "org": "Undisclosed"
     }
 }
