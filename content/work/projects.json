@@ -1,6 +1,118 @@
 {
     "projects": [
         {
+        "title": "digifarm",
+            "description": "a farm operations management system for egg processing facilities ft. data entry, inventory tracking, analytics, automated reports, document repository + role-based access, built w/ next.js + react + prisma.",
+            "source": null,
+            "status": "undeployed",
+            "status_url": null,
+            "released_by": "2026-07"
+        },
+        {
+            "title": "ecosphere-esg",
+            "description": "team that1bit's submission for odoo hack 2026. an esg management platform to track & improve sustainability, social impact, governance through data-driven insights, gamification & ml-driven scoring.",
+            "source": "https://github.com/FireHead90544/EcoSphere-ESG",
+            "status": "visual demo",
+            "status_url": "https://github.com/user-attachments/assets/f9b1b520-55dd-44f9-9d84-bea2ea217271",
+            "released_by": "2026-07"
+        },
+        {
+            "title": "xtract",
+            "description": "an edge-friendly self-hostable web app to extract structured data from scanned invoices/challans & export them into spreadsheets using lightweight vllms, built w/ next.js + react.",
+            "source": "https://github.com/FireHead90544/XTract",
+            "status": "visual demo",
+            "status_url": "https://github.com/user-attachments/assets/13d1bfc0-8c6e-494f-a152-1fe4f6a4ac6d",
+            "released_by": "2026-07"
+        },
+        {
+            "title": "efnet",
+            "description": "edge face network, a lightweight hybrid cnn-vit framework for few-shot open-set face recognition on edge devices, built towards graduation research (major) project.",
+            "source": "https://github.com/FireHead90544/EFNet",
+            "status": "visual demo",
+            "status_url": "https://github.com/user-attachments/assets/1828eda1-7993-4f4d-8b92-0b10b8ab55ad",
+            "released_by": "2026-06"
+        },
+        {
+            "title": "far26",
+            "description": "a static peer-to-peer webrtc web app to stream live camera feed from a controller to a projector display and capture animated polaroid photos, built using plain html + javascript.",
+            "source": "https://github.com/FireHead90544/FAR26",
+            "status": "deployment",
+            "status_url": "https://firehead90544.github.io/FAR26/",
+            "released_by": "2026-06"
+        },
+        {
+            "title": "jobqpid",
+            "description": "an ai-powered career readiness platform that analyzes resumes against target job roles, generates personalized readiness scores, identifies skill gaps & suggests mentors, built w/ next.js + react + prisma.",
+            "source": "https://github.com/FireHead90544/JobQPID",
+            "status": "visual demo",
+            "status_url": "https://github.com/user-attachments/assets/4861b816-abb6-4e2c-a61f-dd808ab5dbbe",
+            "released_by": "2026-02"
+        },
+        {
+            "title": "streax",
+            "description": "a retro-themed offline-first productivity tracker pwa featuring pomodoro sessions, gamified goals, streaks + on-device storage, built w/ next.js + react + retroui.",
+            "source": "https://github.com/FireHead90544/StreaX",
+            "status": "deployment",
+            "status_url": "https://trystreax.vercel.app/",
+            "released_by": "2026-02"
+        },
+        {
+            "title": "yolofries",
+            "description": "an e2e computer vision system for fries quality analysis at supply chains & inventories using a custom-trained yolo26l-seg model over ~3k instances of hand-labelled fries, built w/ pytorch + fastapi + next.js.",
+            "source": "https://github.com/FireHead90544/YOLOFries",
+            "status": "undeployed",
+            "status_url": null,
+            "released_by": "2026-01"
+        },
+        {
+            "title": "rlswarm",
+            "description": "official implementation of 'policy optimization for scalable swarm robotics in physics based environments' ft. a continuous physics-based gymnasium environment with ppo + dqn benchmarks.",
+            "source": "https://github.com/FireHead90544/RLSwarm",
+            "status": "video demo",
+            "status_url": "https://github.com/user-attachments/assets/6e0987a6-cf92-433d-9357-197b4aa9e77c",
+            "released_by": "2025-12"
+        },
+        {
+            "title": "popkizv2",
+            "description": "a soft pastel-themed sequel to popkiz built using vite + typescript + gsap, highly customizable and statically deployable.",
+            "source": "https://github.com/FireHead90544/PopKizV2",
+            "status": "deployment",
+            "status_url": "https://firehead90544.github.io/PopKizV2",
+            "released_by": "2025-11"
+        },
+        {
+            "title": "while(moo)",
+            "description": "team that1bit's submission for uttarakhand rajat jayanti hackathon 2025. an offline-first cattle breed identification system + custom explainable cnn architecture (moonet) built w/ pytorch + next.js + react.",
+            "source": "https://github.com/FireHead90544/whileMOO",
+            "status": "deployment",
+            "status_url": "https://whilemoobythat1bit.vercel.app/",
+            "released_by": "2025-11"
+        },
+        {
+            "title": "pwrbyte",
+            "description": "team that1bit's submission under problem statement ps25192 for sih2025. an ml-powered decision support system to predict project cost + time overruns.",
+            "source": "https://github.com/FireHead90544/PWRbyte",
+            "status": "deployment",
+            "status_url": "https://pwrbyte.vercel.app/",
+            "released_by": "2025-10"
+        },
+        {
+            "title": "chirkut",
+            "description": "a minimal self-hostable expense tracking web app to manage shared expenses, settlements + balances among roommates, built w/ next.js + react + prisma.",
+            "source": "https://github.com/FireHead90544/Chirkut",
+            "status": "visual demo",
+            "status_url": "https://github.com/user-attachments/assets/92d0ee4d-e980-4228-b330-bf3942ffc531",
+            "released_by": "2025-08"
+        },
+        {
+            "title": "trashformer",
+            "description": "team bingage's submission for utu socio hackathon 2025. an iot + ai-powered waste management system promoting sustainable waste disposal through gamification, built w/ next.js + react.",
+            "source": "https://github.com/FireHead90544/Trashformer",
+            "status": "visual demo",
+            "status_url": "https://github.com/user-attachments/assets/a88734d2-6c75-43a8-a580-5acdec5d65f6",
+            "released_by": "2025-04"
+        },
+        {
             "title": "retrocord",
             "description": "discord, redesigned in windows-98 style for codedex mini holiday hackathon 2024 under the 'dot-com' boom track, built w/ typescript + next.js + react + css.",
             "source": "https://github.com/FireHead90544/RetroCord",
@@ -18,7 +130,7 @@
         },
         {
             "title": "papertrail",
-            "description": "team that1bit's submission under problem statement SIH1614 for SIH2024. a web app built with typescript + next.js + react to summarize a faculty member's tex-based academic records using an llm.",
+            "description": "team that1bit's submission under problem statement ps1614 for sih2024. a web app built with typescript + next.js + react to summarize a faculty member's tex-based academic records using an llm.",
             "source": "https://github.com/FireHead90544/papertrail/",
             "status": "deployment",
             "status_url": "https://papertrailbythat1bit.vercel.app/",
@@ -114,7 +226,7 @@
         },
         {
             "title": "crap-bot",
-            "description": "a deep-learning powered chatbot for champawat district, developed @ dr. a. p. j abdul kalam institute of technology, tanakpur.",
+            "description": "a simple deep-learning powered chatbot leveraging one-hot encoding for champawat district, developed @ dr. a. p. j abdul kalam institute of technology, tanakpur, built using tensorflow.",
             "source": "https://github.com/FireHead90544/Crap-Bot/",
             "status": "undeployed",
             "status_url": null,
