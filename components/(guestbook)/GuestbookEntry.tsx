@@ -73,7 +73,7 @@ const GuestbookEntry = ({ entry }: { entry: GuestbookEntryData }) => {
 						{date}
 					</time>
 				</div>
-				<p className="text-sm font-light text-foreground/80 leading-relaxed">{entry.message}</p>
+				<p className="text-sm font-light text-foreground/80 leading-relaxed">{entry.message.toLowerCase()}</p>
 				{hasSocials && (
 					<div className="flex items-center gap-2 pt-0.5">
 						{entry.socials?.github && <SocialIcon type="github" href={entry.socials.github} />}
