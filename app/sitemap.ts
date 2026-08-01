@@ -13,6 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const routes = [
         "/",
         "/work",
+        "/guestbook",
         "/blog",
     ].map((route) => ({
         url: `${hostURL}${route}`,

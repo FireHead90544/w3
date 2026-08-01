@@ -6,13 +6,14 @@ interface InternalLinkProps extends LinkProps {
   text: string | React.ReactNode,
   target?: "_blank" | "_self" | "_parent" | "_top",
   rel?: string,
-  fakeExternal?: boolean
+  fakeExternal?: boolean,
+  bold?: boolean
 }
 
-const InternalLink = ({ text, fakeExternal, ...props }: InternalLinkProps) => {
+const InternalLink = ({ text, fakeExternal, bold, ...props }: InternalLinkProps) => {
   return (
     <Link className="inline-flex w-fit items-center text-foreground hover:text-muted-foreground duration-200" {...props}>
-      <span className="border-b-2">{text}</span>
+      <span className={`border-b-2 ${bold && "font-medium"}`}>{text}</span>
       {(props.target==="_blank" || fakeExternal) && <ArrowTopRight className="relative -top-1 scale-75" />}
     </Link>
   )

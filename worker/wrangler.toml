@@ -1,0 +1,11 @@
+name = "w3guestbook"
+main = "src/index.ts"
+compatibility_date = "2026-08-01"
+
+workers_dev = true
+preview_urls = false
+
+[[d1_databases]]
+binding = "DB"
+database_name = "w3guestbook"
+database_id = "55a08f8f-bb6a-49ac-aa3d-063e6f473fe7"

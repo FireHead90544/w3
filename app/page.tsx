@@ -17,7 +17,7 @@ export default function Home() {
 
 		<AboutContainer>
 			<span>
-				{infoMeta.profile.about.toLowerCase()}
+				{infoMeta.profile.about.toLowerCase()} feel free to check out my works, blog or maybe just sign the <InternalLink href={"/guestbook"} text="guestbook" fakeExternal bold />, eh?
 			</span>
 			<FunFactBox />
 		</AboutContainer>

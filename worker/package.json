@@ -1,0 +1,14 @@
+{
+  "name": "w3guestbook",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "db:init": "wrangler d1 execute w3guestbook --file=./schema.sql"
+  },
+  "devDependencies": {
+    "typescript": "^7.0.2",
+    "wrangler": "^4.118.0"
+  }
+}
