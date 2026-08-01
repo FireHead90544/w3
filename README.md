@@ -8,6 +8,7 @@ My awesome portfolio website redesigned & built with Next.js + React + TailwindC
 - Highly customizable and templatable, pulls data from `content/` directory
 - Blog powered with MDX.js
 - Work/Project showcase
+- Guestbook with Cloudflare Worker + D1 backend
 - API based opengraph image generation
 - Web analytics
 
@@ -39,6 +40,12 @@ Create a `.env.local` file in the root directory (or setup your production envir
 | `HOST_DOMAIN`                  | No, if hosting on Vercel/localhost     | `mydomain.xyz`                         |
 | `NEXT_PUBLIC_UMAMI_WEBSITE_ID` | No, if you don't want to use analytics | `xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx` |
 | `NEXT_PUBLIC_UMAMI_URL`        | No, if you don't want to use analytics | `https://cloud.umami.is`               |
+| `WORKER_URL`                   | Yes, for the guestbook to work         | `https://w3-guestbook.<user>.workers.dev` |
+| `WORKER_SECRET`                | Yes, for the guestbook to work         | `openssl rand -hex 32`                 |
+
+### Setup Guestbook
+
+Read [worker/README.md](worker/README.md) to deploy the guestbook worker on Cloudflare which manages the serverless D1 database. Setup the `WORKER_URL` and `WORKER_SECRET` environment variables in the Next.js app and your ready to go.
 
 ### Setup Content/Template Data
 
