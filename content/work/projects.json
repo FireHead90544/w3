@@ -1,7 +1,47 @@
 {
     "projects": [
         {
-        "title": "digifarm",
+            "title": "miyulabs/dispatch",
+            "description": "a lightweight stateful campaign mailer & delivery engine featuring durable state, batched rate-limited delivery, dns validation, retries + crash recovery, built w/ python + sqlite.",
+            "source": "https://github.com/MiyuLabs/dispatch",
+            "status": "architecture",
+            "status_url": "https://github.com/user-attachments/assets/2ec1a762-b735-4202-8b27-9a909631701f",
+            "released_by": "2026-09"
+        },
+        {
+            "title": "miyulabs/www",
+            "description": "miyulabs' web platform combining the marketing site, pre-orders, admin dashboard + decoupled mdx blog into a single next.js app, built w/ typescript + postgresql with automated ci/cd deployments.",
+            "source": null,
+            "status": "deployment",
+            "status_url": "https://miyulabs.in/",
+            "released_by": "2026-09"
+        },
+        {
+            "title": "miyulabs/api",
+            "description": "a high-performance device-facing go backend for miyu devices, handling device provisioning, ota firmware updates, partner pairing + messaging over mqtt, built w/ go + postgresql + gorm + cloudflare r2.",
+            "source": null,
+            "status": "architecture",
+            "status_url": "https://raw.githubusercontent.com/MiyuLabs/blog/main/assets/well-we-built-miyu/device-network-architecture.png",
+            "released_by": "2026-08"
+        },
+        {
+            "title": "miyulabs/firmware",
+            "description": "miyuos, firmware powering miyu devices on esp32, ft. animated character rendering, touch interaction, audio playback, wifi, mqtt partner communication, companion apps + ota updates, built w/ c++ + freertos.",
+            "source": null,
+            "status": "experience?",
+            "status_url": "https://miyulabs.in/explore",
+            "released_by": "2026-08"
+        },
+        {
+            "title": "miyulabs/waitlist",
+            "description": "pre-launch waitlist platform for miyulabs ft. subscriber management, admin dashboard, json exports, transactional email notifications + secure token-based access, built w/ next.js + typescript + sqlite.",
+            "source": "https://github.com/MiyuLabs/waitlist",
+            "status": "undeployed",
+            "status_url": null,
+            "released_by": "2026-08"
+        },
+        {
+            "title": "digifarm",
             "description": "a farm operations management system for egg processing facilities ft. data entry, inventory tracking, analytics, automated reports, document repository + role-based access, built w/ next.js + react + prisma.",
             "source": null,
             "status": "undeployed",
