@@ -6,7 +6,7 @@ interface PostMetadata {
     title: string,
     summary: string,
     publish_date: string,
-    image?: string
+    reference?: string
 }
 
 const getMDXFiles = (dir: string) => {
@@ -16,8 +16,17 @@ const getMDXFiles = (dir: string) => {
 const readMDXFile = (filePath: string) => {
     const content = fs.readFileSync(filePath, "utf-8");
     const matter = frontmatter(content);
+    const metadata = matter.data as Omit<PostMetadata, "publish_date"> & { publish_date: string | Date };
     
-    return { metadata: matter.data as PostMetadata, content: matter.content }
+    return {
+        metadata: {
+            ...metadata,
+            publish_date: metadata.publish_date instanceof Date
+                ? metadata.publish_date.toISOString().split("T")[0]
+                : metadata.publish_date
+        },
+        content: matter.content
+    }
 }
 
 export const getBlogPosts = () => {
