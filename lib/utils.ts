@@ -21,7 +21,7 @@ export function formatDate(date: string, addRelative: boolean = false): string {
   const formattedDate = dateObj.toLocaleDateString("en-US", {
     year: "numeric",
     month: "short",
-    day: "numeric"
+    day: "2-digit"
   }).toLowerCase();
 
   if (!addRelative) {
