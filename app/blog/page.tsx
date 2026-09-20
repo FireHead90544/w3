@@ -26,7 +26,8 @@ export default function Blog() {
 	const posts = getBlogPosts().sort((a, b) => new Date(b.metadata.publish_date).getTime() - new Date(a.metadata.publish_date).getTime()).map((post) => ({
 		title: post.metadata.title,
 		slug: post.slug,
-		publish_date: post.metadata.publish_date
+		publish_date: post.metadata.publish_date,
+		reference: post.metadata.reference
 	}));
 
 	return (

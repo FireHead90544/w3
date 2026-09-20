@@ -73,10 +73,10 @@ To create a post with the url `/blog/post-slug`, create `content/blog/post-slug.
 title: Post Title
 summary: SEO Friendly Description
 publish_date: YYYY-MM-DD
+# reference: https://example.com/blog/post # If the actual post resides somewhere else and just needs listing here
 ---
 
-# MDX Friendly Post Content Here
-```
+# MDX Friendly Post Content Here```
 
 ### Running the Development Server
 

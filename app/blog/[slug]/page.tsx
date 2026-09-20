@@ -1,4 +1,4 @@
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import { getBlogPosts } from "@/lib/blog";
 import CustomMDX from "@/components/(layout)/CustomMDX";
 import { formatDate } from "@/lib/utils";
@@ -49,6 +49,9 @@ export default async function Post(props: { params: Promise<{ slug: string }> })
     const post = getBlogPosts().find((post) => post.slug === params.slug);
     if (!post) {
 		return notFound();
+	}
+	if (post.metadata.reference) {
+		redirect(post.metadata.reference);
 	}
 
     const hostURL = getHostURL();
