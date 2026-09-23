@@ -1,8 +1,16 @@
 {
     "projects": [
         {
-            "title": "miyulabs/dispatch",
-            "description": "a lightweight stateful campaign mailer & delivery engine featuring durable state, batched rate-limited delivery, dns validation, retries + crash recovery, built w/ python + sqlite.",
+            "title": "miyumail",
+            "description": "self-hosted email infra + native desktop client for small teams managing custom-domain mailboxes, ft. virtual ids, 2-way sync, rfc 5322 threading + shared state, built w/ go-fyne + workers/d1+ imap + resend.",
+            "source": "https://github.com/MiyuLabs/mail",
+            "status": "architecture",
+            "status_url": "https://github.com/user-attachments/assets/25bbd97e-3b44-4a96-bb3a-c0968965046c",
+            "released_by": "2026-09"
+        },
+        {
+            "title": "dispatch",
+            "description": "miyulabs' lightweight stateful campaign mailer & delivery engine featuring durable state, batched rate-limited delivery, dns validation, retries + crash recovery, built w/ python + sqlite.",
             "source": "https://github.com/MiyuLabs/dispatch",
             "status": "architecture",
             "status_url": "https://github.com/user-attachments/assets/2ec1a762-b735-4202-8b27-9a909631701f",
@@ -25,15 +33,15 @@
             "released_by": "2026-08"
         },
         {
-            "title": "miyulabs/firmware",
-            "description": "miyuos, firmware powering miyu devices on esp32, ft. animated character rendering, touch interaction, audio playback, wifi, mqtt partner communication, companion apps + ota updates, built w/ c++ + freertos.",
+            "title": "miyuos",
+            "description": "firmware powering miyu devices on esp32, ft. animated character rendering, touch interaction, audio playback, wifi, mqtt partner communication, companion apps + ota updates, built w/ c++ + freertos.",
             "source": null,
             "status": "experience?",
             "status_url": "https://miyulabs.in/explore",
             "released_by": "2026-08"
         },
         {
-            "title": "miyulabs/waitlist",
+            "title": "miyu-waitlist",
             "description": "pre-launch waitlist platform for miyulabs ft. subscriber management, admin dashboard, json exports, transactional email notifications + secure token-based access, built w/ next.js + typescript + sqlite.",
             "source": "https://github.com/MiyuLabs/waitlist",
             "status": "undeployed",
