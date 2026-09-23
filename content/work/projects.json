@@ -57,6 +57,14 @@
             "released_by": "2026-07"
         },
         {
+            "title": "thenctimes",
+            "description": "an interactive editorial portfolio styled as a classic broadsheet newspaper featuring native 3d page flips, responsive layouts, article modals + mdx-driven content, built w/ next.js + react + typescript.",
+            "source": "https://github.com/FireHead90544/nctimes",
+            "status": "visual demo",
+            "status_url": "https://github.com/user-attachments/assets/e83901b1-5192-43a7-8bd8-8921b9905b42",
+            "released_by": "2026-07"
+        },
+        {
             "title": "ecosphere-esg",
             "description": "team that1bit's submission for odoo hack 2026. an esg management platform to track & improve sustainability, social impact, governance through data-driven insights, gamification & ml-driven scoring.",
             "source": "https://github.com/FireHead90544/EcoSphere-ESG",
